@@ -18,6 +18,9 @@ type
     lblUsuario: TLabel;
     lblData: TLabel;
     dbeImgPlanoFundo: TDBImage;
+    CADASTROS1: TMenuItem;
+    RELATRIOS1: TMenuItem;
+    CNFIGURAES1: TMenuItem;
   private
     { Private declarations }
   public

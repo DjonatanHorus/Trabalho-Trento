@@ -5,12 +5,13 @@ object DmConexao: TDmConexao
   object FDCon: TFDConnection
     Params.Strings = (
       
-        'Database=C:\ProjetoDelphi\Projeto Delphi\Base de Dados\BASEDADOS' +
-        'SISTEMA.FDB'
+        'Database=C:\Trabalho-Trento\Projeto Delphi\Base de Dados\BASEDAD' +
+        'OSSISTEMA.FDB'
       'User_Name=SYSDBA'
       'Password=masterkey'
       'DriverID=FB')
     Connected = True
+    LoginPrompt = False
     Left = 80
     Top = 40
   end

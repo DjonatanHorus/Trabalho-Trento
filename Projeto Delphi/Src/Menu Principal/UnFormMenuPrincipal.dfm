@@ -4,8 +4,8 @@ object FormMenuPrincipal: TFormMenuPrincipal
   BorderIcons = []
   BorderStyle = bsNone
   Caption = 'Menu Principal'
-  ClientHeight = 490
-  ClientWidth = 736
+  ClientHeight = 858
+  ClientWidth = 1304
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -18,29 +18,28 @@ object FormMenuPrincipal: TFormMenuPrincipal
   PixelsPerInch = 96
   TextHeight = 13
   object pnlMenuLateral: TPanel
-    Left = 672
+    Left = 1224
     Top = 0
-    Width = 64
-    Height = 471
+    Width = 80
+    Height = 833
     Align = alRight
     TabOrder = 0
+    ExplicitHeight = 839
   end
   object pnlBotonBaar: TPanel
     Left = 0
-    Top = 471
-    Width = 736
-    Height = 19
+    Top = 833
+    Width = 1304
+    Height = 25
     Margins.Top = 0
     Align = alBottom
     TabOrder = 1
-    ExplicitTop = 432
-    ExplicitWidth = 720
     object lblEmpresa: TLabel
       AlignWithMargins = True
       Left = 184
       Top = 1
       Width = 72
-      Height = 17
+      Height = 23
       Margins.Left = 30
       Margins.Top = 0
       Margins.Right = 0
@@ -61,7 +60,7 @@ object FormMenuPrincipal: TFormMenuPrincipal
       Left = 286
       Top = 1
       Width = 72
-      Height = 17
+      Height = 23
       Margins.Left = 30
       Margins.Top = 0
       Margins.Right = 0
@@ -79,55 +78,61 @@ object FormMenuPrincipal: TFormMenuPrincipal
     end
     object lblData: TLabel
       AlignWithMargins = True
-      Left = 544
+      Left = 1241
       Top = 1
-      Width = 171
-      Height = 17
+      Width = 42
+      Height = 23
       Margins.Left = 0
       Margins.Top = 0
       Margins.Right = 20
       Margins.Bottom = 0
       Align = alRight
       Alignment = taRightJustify
-      Caption = 'Empresa:'
+      Caption = 'Data:'
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
       Font.Height = -15
       Font.Name = 'Verdana'
       Font.Style = []
       ParentFont = False
+      ExplicitLeft = 673
+      ExplicitHeight = 18
     end
     object ProgressBar1: TProgressBar
       AlignWithMargins = True
       Left = 4
       Top = 1
       Width = 150
-      Height = 17
+      Height = 23
       Margins.Top = 0
       Margins.Right = 0
       Margins.Bottom = 0
       Align = alLeft
       TabOrder = 0
-      ExplicitLeft = 0
-      ExplicitTop = 4
-      ExplicitHeight = 14
+      ExplicitHeight = 17
     end
   end
   object dbeImgPlanoFundo: TDBImage
     Left = 0
     Top = 0
-    Width = 672
-    Height = 471
+    Width = 1224
+    Height = 833
     Align = alClient
     TabOrder = 2
-    ExplicitLeft = 320
-    ExplicitTop = 192
-    ExplicitWidth = 105
-    ExplicitHeight = 105
+    ExplicitHeight = 801
   end
   object MenuTop: TMainMenu
     Left = 688
-    Top = 96
+    Top = 216
+    object CADASTROS1: TMenuItem
+      Caption = 'CADASTROS'
+    end
+    object RELATRIOS1: TMenuItem
+      Caption = 'RELAT'#211'RIOS'
+    end
+    object CNFIGURAES1: TMenuItem
+      Caption = 'CONFIGURA'#199#213'ES'
+    end
   end
   object actList: TActionList
     Left = 688
