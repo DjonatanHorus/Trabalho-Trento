@@ -3,7 +3,7 @@ unit UnTypesGeral;
 interface
 
 uses
-  Vcl.Controls, System.SysUtils, Vcl.Dialogs,
+  UnFormLogin, Vcl.Controls, System.SysUtils, Vcl.Dialogs,
   Vcl.ExtCtrls, Vcl.Forms;
 
 type

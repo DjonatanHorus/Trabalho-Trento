@@ -118,8 +118,8 @@ object FormMenuPrincipal: TFormMenuPrincipal
     TabOrder = 2
   end
   object MenuTop: TMainMenu
-    Left = 1168
-    Top = 88
+    Left = 688
+    Top = 216
     object CADASTROS1: TMenuItem
       Caption = 'CADASTROS'
       object actCadCliente1: TMenuItem
@@ -158,43 +158,43 @@ object FormMenuPrincipal: TFormMenuPrincipal
     end
   end
   object actList: TActionList
-    Left = 1168
-    Top = 168
+    Left = 688
+    Top = 152
     object actCadProduto: TAction
       Category = 'Cadastro'
-      Caption = 'Produto'
+      Caption = 'actCadProduto'
     end
     object actCadFornecedor: TAction
       Category = 'Cadastro'
-      Caption = 'Fornecedor'
+      Caption = 'actCadFornecedor'
     end
     object actCadCliente: TAction
       Category = 'Cadastro'
-      Caption = 'Cliente'
+      Caption = 'actCadCliente'
     end
     object actCadUsuario: TAction
       Category = 'Cadastro'
-      Caption = 'Us'#250'ario'
+      Caption = 'actCadUsuario'
     end
     object actFinalizarSistema: TAction
       Category = 'Config'
-      Caption = 'Finalizar sistema'
+      Caption = 'actFinalizarSistema'
     end
     object actConfiguracoes: TAction
       Category = 'Config'
-      Caption = 'Configura'#231#245'es'
+      Caption = 'actConfiguracoes'
     end
     object actRelVendas: TAction
       Category = 'Relat'#243'rios'
-      Caption = 'Vendas'
+      Caption = 'actRelVendas'
     end
     object actRelCompras: TAction
       Category = 'Relat'#243'rios'
-      Caption = 'Compras'
+      Caption = 'actRelCompras'
     end
     object actRelEstoque: TAction
       Category = 'Relat'#243'rios'
-      Caption = 'Estoque'
+      Caption = 'actRelEstoque'
     end
     object Action4: TAction
       Caption = 'Action4'

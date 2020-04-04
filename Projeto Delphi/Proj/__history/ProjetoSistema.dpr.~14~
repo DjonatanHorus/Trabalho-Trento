@@ -19,8 +19,7 @@ uses
   UnFormCadastroCliente in '..\Src\Cadastro de Cliente\UnFormCadastroCliente.pas' {FormCadastroCliente},
   UnFormCadastroFornecedor in '..\Src\Cadastro de Fornecedor\UnFormCadastroFornecedor.pas' {Form3},
   UnFormCadastroUsuario in '..\Src\Cadastro Usuario\UnFormCadastroUsuario.pas' {FormCadastroUsuario},
-  UnFormPadraoCadastro in '..\Src\Formularios Padrão Framework\UnFormPadraoCadastro.pas' {FormPadraoCadastro},
-  UnFDQueryCon in '..\Src\Units Types Geral\UnFDQueryCon.pas';
+  UnFormPadraoCadastro in '..\Src\Formularios Padrão Framework\UnFormPadraoCadastro.pas' {FormPadraoCadastro};
 
 {$R *.res}
 

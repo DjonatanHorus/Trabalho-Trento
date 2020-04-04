@@ -24,6 +24,7 @@ object FormMenuPrincipal: TFormMenuPrincipal
     Height = 833
     Align = alRight
     TabOrder = 0
+    ExplicitHeight = 839
   end
   object pnlBotonBaar: TPanel
     Left = 0
@@ -94,6 +95,7 @@ object FormMenuPrincipal: TFormMenuPrincipal
       Font.Name = 'Verdana'
       Font.Style = []
       ParentFont = False
+      ExplicitLeft = 673
       ExplicitHeight = 18
     end
     object ProgressBar1: TProgressBar
@@ -107,6 +109,7 @@ object FormMenuPrincipal: TFormMenuPrincipal
       Margins.Bottom = 0
       Align = alLeft
       TabOrder = 0
+      ExplicitHeight = 17
     end
   end
   object dbeImgPlanoFundo: TDBImage
@@ -116,91 +119,23 @@ object FormMenuPrincipal: TFormMenuPrincipal
     Height = 833
     Align = alClient
     TabOrder = 2
+    ExplicitHeight = 801
   end
   object MenuTop: TMainMenu
-    Left = 1168
-    Top = 88
+    Left = 688
+    Top = 216
     object CADASTROS1: TMenuItem
       Caption = 'CADASTROS'
-      object actCadCliente1: TMenuItem
-        Action = actCadCliente
-      end
-      object actCadProduto1: TMenuItem
-        Action = actCadProduto
-      end
-      object actCadFornecedor1: TMenuItem
-        Action = actCadFornecedor
-      end
-      object actCadUsuario1: TMenuItem
-        Action = actCadUsuario
-      end
     end
     object RELATRIOS1: TMenuItem
       Caption = 'RELAT'#211'RIOS'
-      object actRelCompras1: TMenuItem
-        Action = actRelCompras
-      end
-      object actRelEstoque1: TMenuItem
-        Action = actRelEstoque
-      end
-      object actRelVendas1: TMenuItem
-        Action = actRelVendas
-      end
     end
     object CNFIGURAES1: TMenuItem
       Caption = 'CONFIGURA'#199#213'ES'
-      object actConfiguracoes1: TMenuItem
-        Action = actConfiguracoes
-      end
-      object actFinalizarSistema1: TMenuItem
-        Action = actFinalizarSistema
-      end
     end
   end
   object actList: TActionList
-    Left = 1168
-    Top = 168
-    object actCadProduto: TAction
-      Category = 'Cadastro'
-      Caption = 'Produto'
-    end
-    object actCadFornecedor: TAction
-      Category = 'Cadastro'
-      Caption = 'Fornecedor'
-    end
-    object actCadCliente: TAction
-      Category = 'Cadastro'
-      Caption = 'Cliente'
-    end
-    object actCadUsuario: TAction
-      Category = 'Cadastro'
-      Caption = 'Us'#250'ario'
-    end
-    object actFinalizarSistema: TAction
-      Category = 'Config'
-      Caption = 'Finalizar sistema'
-    end
-    object actConfiguracoes: TAction
-      Category = 'Config'
-      Caption = 'Configura'#231#245'es'
-    end
-    object actRelVendas: TAction
-      Category = 'Relat'#243'rios'
-      Caption = 'Vendas'
-    end
-    object actRelCompras: TAction
-      Category = 'Relat'#243'rios'
-      Caption = 'Compras'
-    end
-    object actRelEstoque: TAction
-      Category = 'Relat'#243'rios'
-      Caption = 'Estoque'
-    end
-    object Action4: TAction
-      Caption = 'Action4'
-    end
-    object Action5: TAction
-      Caption = 'Action5'
-    end
+    Left = 688
+    Top = 152
   end
 end

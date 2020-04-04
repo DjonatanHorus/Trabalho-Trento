@@ -7,6 +7,7 @@ inherited FormPadraoCadastro: TFormPadraoCadastro
   Constraints.MinHeight = 570
   Constraints.MinWidth = 700
   OnShow = FormShow
+  ExplicitTop = -16
   ExplicitWidth = 700
   ExplicitHeight = 570
   PixelsPerInch = 96
@@ -18,6 +19,7 @@ inherited FormPadraoCadastro: TFormPadraoCadastro
     Height = 523
     Align = alRight
     TabOrder = 0
+    ExplicitHeight = 524
     object btnNovo: TSpeedButton
       Left = 6
       Top = 8
@@ -524,8 +526,10 @@ inherited FormPadraoCadastro: TFormPadraoCadastro
     ActivePage = tsConsultas
     Align = alClient
     TabOrder = 1
+    ExplicitHeight = 524
     object tsConsultas: TTabSheet
       Caption = 'Consultas'
+      ExplicitHeight = 496
       object pnlConsultas: TPanel
         Left = 0
         Top = 0
@@ -686,9 +690,6 @@ inherited FormPadraoCadastro: TFormPadraoCadastro
     object tsCadastro: TTabSheet
       Caption = 'Cadastro'
       ImageIndex = 1
-      ExplicitLeft = 0
-      ExplicitTop = 0
-      ExplicitWidth = 0
       ExplicitHeight = 496
       object pgcCadastro: TPageControl
         Left = 0
@@ -700,9 +701,6 @@ inherited FormPadraoCadastro: TFormPadraoCadastro
         TabOrder = 0
         ExplicitHeight = 447
         object tsCadastroPrincipal: TTabSheet
-          ExplicitLeft = 0
-          ExplicitTop = 0
-          ExplicitWidth = 0
           ExplicitHeight = 419
         end
       end
@@ -1012,9 +1010,12 @@ inherited FormPadraoCadastro: TFormPadraoCadastro
       Margins.Bottom = 10
       Align = alLeft
       TabOrder = 0
+      ExplicitHeight = 15
     end
   end
   object SqlCadastro: TFDQuery
+    Active = True
+    Connection = DmConexao.fdConect
     SQL.Strings = (
       'SELECT *'
       ' FROM USUARIOS')
@@ -1082,6 +1083,7 @@ inherited FormPadraoCadastro: TFormPadraoCadastro
     Top = 457
   end
   object SQLConsultas: TFDQuery
+    Connection = DmConexao.fdConect
     Left = 344
     Top = 456
   end

@@ -123,11 +123,31 @@
             <FormType>dfm</FormType>
             <DesignClass>TDataModule</DesignClass>
         </DCCReference>
-        <DCCReference Include="..\Src\Formularios Padrão Framework\UnFormPadraoCadastro.pas"/>
         <DCCReference Include="..\Src\Formularios Padrão Framework\UnFormPadraoFramework.pas">
             <Form>FormPadraoFramwork</Form>
             <FormType>dfm</FormType>
         </DCCReference>
+        <DCCReference Include="..\Src\Cadastro de Produtos\UnFormCadastroProdutos.pas">
+            <Form>FormCadastroProdutos</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="..\Src\Cadastro de Cliente\UnFormCadastroCliente.pas">
+            <Form>FormCadastroCliente</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="..\Src\Cadastro de Fornecedor\UnFormCadastroFornecedor.pas">
+            <Form>Form3</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="..\Src\Cadastro Usuario\UnFormCadastroUsuario.pas">
+            <Form>FormCadastroUsuario</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="..\Src\Formularios Padrão Framework\UnFormPadraoCadastro.pas">
+            <Form>FormPadraoCadastro</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="..\Src\Units Types Geral\UnFDQueryCon.pas"/>
         <BuildConfiguration Include="Release">
             <Key>Cfg_2</Key>
             <CfgParent>Base</CfgParent>

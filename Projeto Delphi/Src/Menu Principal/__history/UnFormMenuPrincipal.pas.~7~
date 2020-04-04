@@ -42,7 +42,7 @@ type
     actConfiguracoes1: TMenuItem;
     actFinalizarSistema1: TMenuItem;
   private
-    procedure SetConfigInicial;
+    { Private declarations }
   public
     { Public declarations }
   end;
@@ -53,12 +53,5 @@ var
 implementation
 
 {$R *.dfm}
-
-{ TFormMenuPrincipal }
-
-procedure TFormMenuPrincipal.SetConfigInicial;
-begin
-
-end;
 
 end.

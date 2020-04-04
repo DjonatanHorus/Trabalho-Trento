@@ -21,28 +21,8 @@ type
     CADASTROS1: TMenuItem;
     RELATRIOS1: TMenuItem;
     CNFIGURAES1: TMenuItem;
-    actCadProduto: TAction;
-    actCadFornecedor: TAction;
-    actCadCliente: TAction;
-    actCadUsuario: TAction;
-    actFinalizarSistema: TAction;
-    actConfiguracoes: TAction;
-    actRelVendas: TAction;
-    actRelCompras: TAction;
-    actRelEstoque: TAction;
-    Action4: TAction;
-    Action5: TAction;
-    actCadCliente1: TMenuItem;
-    actCadProduto1: TMenuItem;
-    actCadFornecedor1: TMenuItem;
-    actCadUsuario1: TMenuItem;
-    actRelCompras1: TMenuItem;
-    actRelEstoque1: TMenuItem;
-    actRelVendas1: TMenuItem;
-    actConfiguracoes1: TMenuItem;
-    actFinalizarSistema1: TMenuItem;
   private
-    procedure SetConfigInicial;
+    { Private declarations }
   public
     { Public declarations }
   end;
@@ -53,12 +33,5 @@ var
 implementation
 
 {$R *.dfm}
-
-{ TFormMenuPrincipal }
-
-procedure TFormMenuPrincipal.SetConfigInicial;
-begin
-
-end;
 
 end.
