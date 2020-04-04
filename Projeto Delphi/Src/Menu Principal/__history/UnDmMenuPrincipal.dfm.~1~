@@ -1,0 +1,5 @@
+object DmMenuPrincipal: TDmMenuPrincipal
+  OldCreateOrder = False
+  Height = 261
+  Width = 355
+end

@@ -1,0 +1,5 @@
+1- Instale o programa.
+2- Copie o conteudo da pasta crack para a pasta do programa em: C:/Program Files (x86)/HK-Software/IBExpert
+3- Pronto! Aproveite o programa!
+
+OBS: Não recomendo fazer atualizações no programa!

@@ -1,0 +1,99 @@
+object FormMenuPrincipal: TFormMenuPrincipal
+  Left = 0
+  Top = 0
+  BorderIcons = []
+  BorderStyle = bsNone
+  Caption = 'Menu Principal'
+  ClientHeight = 490
+  ClientWidth = 736
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  Menu = MenuTop
+  OldCreateOrder = False
+  PixelsPerInch = 96
+  TextHeight = 13
+  object pnlMenuLateral: TPanel
+    Left = 648
+    Top = 0
+    Width = 88
+    Height = 471
+    Align = alRight
+    TabOrder = 0
+    ExplicitLeft = 632
+    ExplicitHeight = 451
+  end
+  object pnlBotonBaar: TPanel
+    Left = 0
+    Top = 471
+    Width = 736
+    Height = 19
+    Margins.Top = 0
+    Align = alBottom
+    TabOrder = 1
+    ExplicitTop = 432
+    ExplicitWidth = 720
+    object lblEmpresa: TLabel
+      AlignWithMargins = True
+      Left = 184
+      Top = 4
+      Width = 48
+      Height = 11
+      Margins.Left = 30
+      Align = alLeft
+      Alignment = taCenter
+      Caption = 'Empresa:'
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -13
+      Font.Name = 'Times New Roman'
+      Font.Style = []
+      ParentFont = False
+      ExplicitTop = 3
+    end
+    object lblUsuario: TLabel
+      AlignWithMargins = True
+      Left = 265
+      Top = 4
+      Width = 48
+      Height = 11
+      Margins.Left = 30
+      Align = alLeft
+      Alignment = taCenter
+      Caption = 'Empresa:'
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -13
+      Font.Name = 'Times New Roman'
+      Font.Style = []
+      ParentFont = False
+      ExplicitTop = 3
+    end
+    object ProgressBar1: TProgressBar
+      AlignWithMargins = True
+      Left = 4
+      Top = 1
+      Width = 150
+      Height = 17
+      Margins.Top = 0
+      Margins.Right = 0
+      Margins.Bottom = 0
+      Align = alLeft
+      TabOrder = 0
+      ExplicitLeft = 0
+      ExplicitTop = 4
+      ExplicitHeight = 14
+    end
+  end
+  object MenuTop: TMainMenu
+    Left = 648
+    Top = 40
+  end
+  object actList: TActionList
+    Left = 648
+    Top = 96
+  end
+end

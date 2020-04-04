@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+  <Transactions>
+    <Transaction>2020/04/03 20:48:29.253,=C:\Users\Djona\Documents\Embarcadero\Studio\Projects\Unit3.pas</Transaction>
+    <Transaction>2020/04/03 20:51:58.041,C:\ProjetoDelphi\Projeto Delphi\Src\Menu Principal\UnFormMenuPrincipal.dfm=C:\Users\Djona\Documents\Embarcadero\Studio\Projects\Unit3.dfm</Transaction>
+    <Transaction>2020/04/03 20:51:58.041,C:\ProjetoDelphi\Projeto Delphi\Src\Menu Principal\UnFormMenuPrincipal.pas=C:\Users\Djona\Documents\Embarcadero\Studio\Projects\Unit3.pas</Transaction>
+    <Transaction>2020/04/03 20:52:43.624,C:\ProjetoDelphi\Projeto Delphi\Proj\ProjetoSistema.dproj=C:\Users\Djona\Documents\Embarcadero\Studio\Projects\Project3.dproj</Transaction>
+    <Transaction>2020/04/03 21:31:38.718,=C:\ProjetoDelphi\Projeto Delphi\Proj\Unit1.pas</Transaction>
+    <Transaction>2020/04/03 21:32:11.994,C:\ProjetoDelphi\Projeto Delphi\Src\Menu Principal\UnDmMenuPrincipal.pas=C:\ProjetoDelphi\Projeto Delphi\Proj\Unit1.pas</Transaction>
+    <Transaction>2020/04/03 21:32:11.994,C:\ProjetoDelphi\Projeto Delphi\Src\Menu Principal\UnDmMenuPrincipal.dfm=C:\ProjetoDelphi\Projeto Delphi\Proj\Unit1.dfm</Transaction>
+    <Transaction>2020/04/03 21:32:45.519,=C:\ProjetoDelphi\Projeto Delphi\Proj\Unit1.pas</Transaction>
+    <Transaction>2020/04/03 21:33:09.128,C:\ProjetoDelphi\Projeto Delphi\Src\Conexão\UnDmConexao.pas=C:\ProjetoDelphi\Projeto Delphi\Proj\Unit1.pas</Transaction>
+    <Transaction>2020/04/03 21:33:09.128,C:\ProjetoDelphi\Projeto Delphi\Src\Conexão\UnDmConexao.dfm=C:\ProjetoDelphi\Projeto Delphi\Proj\Unit1.dfm</Transaction>
+  </Transactions>
+</BorlandProject>

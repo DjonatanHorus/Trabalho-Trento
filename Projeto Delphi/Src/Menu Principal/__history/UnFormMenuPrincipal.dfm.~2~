@@ -1,0 +1,27 @@
+object FormMenuPrincipal: TFormMenuPrincipal
+  Left = 0
+  Top = 0
+  Caption = 'Menu Principal'
+  ClientHeight = 451
+  ClientWidth = 720
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  PixelsPerInch = 96
+  TextHeight = 13
+  object pnlMenuLateral: TPanel
+    Left = 535
+    Top = 0
+    Width = 185
+    Height = 451
+    Align = alRight
+    TabOrder = 0
+    ExplicitLeft = 280
+    ExplicitTop = 224
+    ExplicitHeight = 41
+  end
+end
