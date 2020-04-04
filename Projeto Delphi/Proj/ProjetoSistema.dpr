@@ -17,7 +17,7 @@ uses
   UnFormPadraoFramework in '..\Src\Formularios Padrão Framework\UnFormPadraoFramework.pas' {FormPadraoFramwork},
   UnFormCadastroProdutos in '..\Src\Cadastro de Produtos\UnFormCadastroProdutos.pas' {FormCadastroProdutos},
   UnFormCadastroCliente in '..\Src\Cadastro de Cliente\UnFormCadastroCliente.pas' {FormCadastroCliente},
-  UnFormCadastroFornecedor in '..\Src\Cadastro de Fornecedor\UnFormCadastroFornecedor.pas' {Form3},
+  UnFormCadastroFornecedor in '..\Src\Cadastro de Fornecedor\UnFormCadastroFornecedor.pas' {FormCadastroFornecedor},
   UnFormCadastroUsuario in '..\Src\Cadastro Usuario\UnFormCadastroUsuario.pas' {FormCadastroUsuario},
   UnFormPadraoCadastro in '..\Src\Formularios Padrão Framework\UnFormPadraoCadastro.pas' {FormPadraoCadastro},
   UnFDQueryCon in '..\Src\Units Types Geral\UnFDQueryCon.pas';
@@ -36,7 +36,7 @@ begin
   Application.CreateForm(TFormPadraoFramwork, FormPadraoFramwork);
   Application.CreateForm(TFormCadastroProdutos, FormCadastroProdutos);
   Application.CreateForm(TFormCadastroCliente, FormCadastroCliente);
-  Application.CreateForm(TForm3, Form3);
+  Application.CreateForm(TFormCadastroFornecedor, FormCadastroFornecedor);
   Application.CreateForm(TFormCadastroUsuario, FormCadastroUsuario);
   Application.CreateForm(TFormPadraoCadastro, FormPadraoCadastro);
   Application.Run;

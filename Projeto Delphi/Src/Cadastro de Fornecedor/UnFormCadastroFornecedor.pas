@@ -13,7 +13,7 @@ uses
   Vcl.Grids, Vcl.DBGrids, Vcl.Buttons, Vcl.ExtCtrls;
 
 type
-  TForm3 = class(TFormPadraoCadastro)
+  TFormCadastroFornecedor = class(TFormPadraoCadastro)
   private
     { Private declarations }
   public
@@ -21,7 +21,7 @@ type
   end;
 
 var
-  Form3: TForm3;
+  FormCadastroFornecedor: TFormCadastroFornecedor;
 
 implementation
 

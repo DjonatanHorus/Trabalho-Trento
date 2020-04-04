@@ -136,7 +136,7 @@
             <FormType>dfm</FormType>
         </DCCReference>
         <DCCReference Include="..\Src\Cadastro de Fornecedor\UnFormCadastroFornecedor.pas">
-            <Form>Form3</Form>
+            <Form>FormCadastroFornecedor</Form>
             <FormType>dfm</FormType>
         </DCCReference>
         <DCCReference Include="..\Src\Cadastro Usuario\UnFormCadastroUsuario.pas">

@@ -1,13 +1,21 @@
-inherited Form3: TForm3
-  Caption = 'Form3'
+inherited FormCadastroFornecedor: TFormCadastroFornecedor
+  Caption = 'FormCadastroFornecedor'
   PixelsPerInch = 96
   TextHeight = 13
   inherited pgcFormCadastro: TPageControl
+    inherited tsConsultas: TTabSheet
+      ExplicitLeft = 4
+      ExplicitTop = 24
+      ExplicitWidth = 616
+      ExplicitHeight = 495
+    end
     inherited tsCadastro: TTabSheet
-      ExplicitLeft = 0
-      ExplicitTop = 0
-      ExplicitWidth = 0
       ExplicitHeight = 0
+    end
+  end
+  inherited pnlFoter: TPanel
+    inherited lblStatus: TLabel
+      Height = 15
     end
   end
 end

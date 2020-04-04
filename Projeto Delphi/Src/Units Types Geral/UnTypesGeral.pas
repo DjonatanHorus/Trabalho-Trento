@@ -20,7 +20,7 @@ type
       AComponente: TOpenDialog; AImage: TImage): Boolean;
     class Procedure MenssagemErro(ATextoErro: string);
     class procedure CarregarFormulario(AClassForm: TFormClass;
-      ATipoExibicao: Boolean);
+      ATipoExibicao: Boolean = true);
 
   end;
 
@@ -70,9 +70,9 @@ class function TGTypeGeral.MenssagemFormatoInvalido
 begin
   if MessageDlg('Formato invalido. ' + AString, mtWarning, mbOKCancel, 0, mbOK)
     = mrOk then
-    Result := True
+    Result := true
   else
-    Result := False;
+    Result := false;
 end;
 
 class procedure TGTypeGeral.SetFocusCampo(ASender: TObject;
