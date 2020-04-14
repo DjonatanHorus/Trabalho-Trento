@@ -215,9 +215,9 @@ object FormMenuPrincipal: TFormMenuPrincipal
     end
     object lblData: TLabel
       AlignWithMargins = True
-      Left = 1241
+      Left = 1152
       Top = 1
-      Width = 42
+      Width = 131
       Height = 23
       Margins.Left = 0
       Margins.Top = 0
@@ -232,7 +232,6 @@ object FormMenuPrincipal: TFormMenuPrincipal
       Font.Name = 'Verdana'
       Font.Style = []
       ParentFont = False
-      ExplicitHeight = 18
     end
     object ProgressBar1: TProgressBar
       AlignWithMargins = True
@@ -307,17 +306,14 @@ object FormMenuPrincipal: TFormMenuPrincipal
     object actCadFornecedor: TAction
       Category = 'Cadastro'
       Caption = 'Fornecedor'
-      OnExecute = actCadFornecedorExecute
     end
     object actCadCliente: TAction
       Category = 'Cadastro'
       Caption = 'Cliente'
-      OnExecute = actCadClienteExecute
     end
     object actCadUsuario: TAction
       Category = 'Cadastro'
       Caption = 'Us'#250'ario'
-      OnExecute = actCadUsuarioExecute
     end
     object actFinalizarSistema: TAction
       Category = 'Config'

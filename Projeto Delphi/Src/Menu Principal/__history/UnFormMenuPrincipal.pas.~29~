@@ -1,9 +1,3 @@
-{ ------------------------------------------------------
-  UNIT: UnFormMenuPrincipal
-  AUTOR: Djonatan Willenz
-  OBJETIVO: Tela principal do sistema.
-  DATA: 13/04/2020
-  ------------------------------------------------------ }
 unit UnFormMenuPrincipal;
 
 interface
@@ -59,6 +53,8 @@ type
     procedure actCadUsuarioExecute(Sender: TObject);
   private
     procedure SetConfigInicial;
+  public
+    { Public declarations }
   end;
 
 var
@@ -72,10 +68,11 @@ uses
 
 {$R *.dfm}
 
+{ TFormMenuPrincipal }
 { ------------------------------------------------------
-  METODO: actCadClienteExecute
+  METODO: SetConfigInicial
   AUTOR: Djonatan Willenz
-  OBJETIVO: Abrir formulario de cadastro de clientes.
+  OBJETIVO: Setar valores inicias ao criar formulário.
   DATA: 13/04/2020
   NOTAS: Criação do método.
   ------------------------------------------------------ }
@@ -85,9 +82,9 @@ begin
 end;
 
 { ------------------------------------------------------
-  METODO: actCadFornecedorExecute
+  METODO: SetConfigInicial
   AUTOR: Djonatan Willenz
-  OBJETIVO: Abrir formulario de cadastro de fornecedores.
+  OBJETIVO: Setar valores inicias ao criar formulário.
   DATA: 13/04/2020
   NOTAS: Criação do método.
   ------------------------------------------------------ }
@@ -97,9 +94,9 @@ begin
 end;
 
 { ------------------------------------------------------
-  METODO: actCadProdutoExecute
+  METODO: SetConfigInicial
   AUTOR: Djonatan Willenz
-  OBJETIVO: Abrir formulario de cadastro de produtos.
+  OBJETIVO: Setar valores inicias ao criar formulário.
   DATA: 13/04/2020
   NOTAS: Criação do método.
   ------------------------------------------------------ }
@@ -109,9 +106,9 @@ begin
 end;
 
 { ------------------------------------------------------
-  METODO: actCadUsuarioExecute
+  METODO: SetConfigInicial
   AUTOR: Djonatan Willenz
-  OBJETIVO: Abrir formulario de cadastro de usuarios.
+  OBJETIVO: Setar valores inicias ao criar formulário.
   DATA: 13/04/2020
   NOTAS: Criação do método.
   ------------------------------------------------------ }
@@ -121,9 +118,9 @@ begin
 end;
 
 { ------------------------------------------------------
-  METODO: actFinalizarSistemaExecute
+  METODO: SetConfigInicial
   AUTOR: Djonatan Willenz
-  OBJETIVO: Finalizar o sistema.
+  OBJETIVO: Setar valores inicias ao criar formulário.
   DATA: 13/04/2020
   NOTAS: Criação do método.
   ------------------------------------------------------ }
@@ -133,7 +130,7 @@ begin
 end;
 
 { ------------------------------------------------------
-  METODO: FormShow
+  METODO: SetConfigInicial
   AUTOR: Djonatan Willenz
   OBJETIVO: Setar valores inicias ao criar formulário.
   DATA: 13/04/2020

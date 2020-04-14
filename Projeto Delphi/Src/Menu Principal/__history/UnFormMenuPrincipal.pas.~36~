@@ -59,6 +59,8 @@ type
     procedure actCadUsuarioExecute(Sender: TObject);
   private
     procedure SetConfigInicial;
+  public
+    { Public declarations }
   end;
 
 var

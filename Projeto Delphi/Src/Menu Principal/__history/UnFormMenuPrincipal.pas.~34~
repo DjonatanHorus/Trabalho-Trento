@@ -1,8 +1,9 @@
 { ------------------------------------------------------
-  UNIT: UnFormMenuPrincipal
+  METODO: actCadClienteExecute
   AUTOR: Djonatan Willenz
-  OBJETIVO: Tela principal do sistema.
+  OBJETIVO: Abrir formulario de cadastro de clientes.
   DATA: 13/04/2020
+  NOTAS: Criação do método.
   ------------------------------------------------------ }
 unit UnFormMenuPrincipal;
 
@@ -59,6 +60,8 @@ type
     procedure actCadUsuarioExecute(Sender: TObject);
   private
     procedure SetConfigInicial;
+  public
+    { Public declarations }
   end;
 
 var

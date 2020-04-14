@@ -1,0 +1,107 @@
+unit UnTypesGeral;
+
+interface
+
+uses
+  Vcl.Controls, System.SysUtils, Vcl.Dialogs,
+  Vcl.ExtCtrls, Vcl.Forms;
+
+type
+  CGeralTypes = Record
+    CUsuarioLogado: string;
+  End;
+
+  TGTypeGeral = class
+    class procedure SetFocusCampo(ASender: TObject; AControle: TWinControl);
+    class function ValidarCampoNumerico(ASender: TObject;
+      AControle: TWinControl; AText, ANomeCampoMessage: String): String;
+    class function MenssagemFormatoInvalido(AString: string = ''): Boolean;
+    class function CarregarImagemEmTImage(ASender: TObject;
+      AComponente: TOpenDialog; AImage: TImage): Boolean;
+    class Procedure MenssagemErro(ATextoErro: string);
+    class procedure CarregarFormulario(AClassForm: TFormClass;
+      ATipoExibicao: Boolean = false);
+
+  end;
+
+implementation
+
+uses
+  UnFormMenuPrincipal;
+
+class function TGTypeGeral.CarregarImagemEmTImage(ASender: TObject;
+  AComponente: TOpenDialog; AImage: TImage): Boolean;
+begin
+  if AComponente.Execute then
+  begin
+    try
+      AImage.Picture.LoadFromFile(AComponente.FileName);
+    except
+      if TGTypeGeral.MenssagemFormatoInvalido('{OK} para buscar imagem.') then
+        TGTypeGeral.CarregarImagemEmTImage(ASender, AComponente, AImage);
+
+    end;
+  end;
+end;
+
+class procedure TGTypeGeral.CarregarFormulario(AClassForm: TFormClass;
+  ATipoExibicao: Boolean);
+var
+  LCarregarForm: TForm;
+begin
+  LCarregarForm := AClassForm.Create(Application);
+  try
+    if ATipoExibicao then
+      LCarregarForm.ShowModal
+    else
+      LCarregarForm.Show;
+  finally
+    FreeAndNil(LCarregarForm);
+  end;
+end;
+
+class procedure TGTypeGeral.MenssagemErro(ATextoErro: string);
+begin
+  ShowMessage(ATextoErro);
+end;
+
+class function TGTypeGeral.MenssagemFormatoInvalido
+  (AString: string = ''): Boolean;
+begin
+  if MessageDlg('Formato invalido. ' + AString, mtWarning, mbOKCancel, 0, mbOK)
+    = mrOk then
+    Result := True
+  else
+    Result := false;
+end;
+
+class procedure TGTypeGeral.SetFocusCampo(ASender: TObject;
+  AControle: TWinControl);
+begin
+  if ASender <> nil then
+  begin
+    if AControle.CanFocus then
+      AControle.SetFocus;
+  end;
+end;
+
+class function TGTypeGeral.ValidarCampoNumerico(ASender: TObject;
+  AControle: TWinControl; AText, ANomeCampoMessage: String): String;
+var
+  I: integer;
+begin
+  if ASender = nil then
+  begin
+    if AText <> '' then
+    begin
+      for I := 0 to AText.Length do
+      begin
+        if not(StrToIntDef(AText[I], 11) >= 0) and
+          not(StrToIntDef(AText[I], 11) <= 9) then
+          AText[I] := ' ';
+      end;
+    end;
+  end;
+end;
+
+end.
