@@ -12,18 +12,26 @@ inherited FormPadraoCadastro: TFormPadraoCadastro
   PixelsPerInch = 96
   TextHeight = 13
   object pnlOpcoes: TPanel
-    Left = 624
+    AlignWithMargins = True
+    Left = 630
     Top = 0
-    Width = 70
-    Height = 523
+    Width = 64
+    Height = 520
+    Margins.Left = 0
+    Margins.Top = 0
+    Margins.Right = 0
     Align = alRight
     TabOrder = 0
+    ExplicitHeight = 523
     object btnNovo: TSpeedButton
-      Left = 6
-      Top = 8
-      Width = 55
-      Height = 54
+      AlignWithMargins = True
+      Left = 4
+      Top = 16
+      Width = 56
+      Height = 47
+      Margins.Top = 15
       Action = actNovo
+      Align = alTop
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
       Font.Height = -13
@@ -88,13 +96,19 @@ inherited FormPadraoCadastro: TFormPadraoCadastro
         F3F1FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF}
       Layout = blGlyphTop
       ParentFont = False
+      ExplicitLeft = 2
+      ExplicitTop = 9
+      ExplicitWidth = 55
     end
     object btnSalvar: TSpeedButton
-      Left = 6
-      Top = 73
-      Width = 55
-      Height = 54
+      AlignWithMargins = True
+      Left = 4
+      Top = 81
+      Width = 56
+      Height = 47
+      Margins.Top = 15
       Action = actSalvar
+      Align = alTop
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
       Font.Height = -13
@@ -159,13 +173,19 @@ inherited FormPadraoCadastro: TFormPadraoCadastro
         FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF}
       Layout = blGlyphTop
       ParentFont = False
+      ExplicitLeft = 6
+      ExplicitTop = 74
+      ExplicitWidth = 55
     end
     object btnEditar: TSpeedButton
-      Left = 6
-      Top = 139
-      Width = 55
-      Height = 54
+      AlignWithMargins = True
+      Left = 4
+      Top = 146
+      Width = 56
+      Height = 47
+      Margins.Top = 15
       Action = actEditar
+      Align = alTop
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
       Font.Height = -13
@@ -230,13 +250,19 @@ inherited FormPadraoCadastro: TFormPadraoCadastro
         F3F1FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF}
       Layout = blGlyphTop
       ParentFont = False
+      ExplicitLeft = 3
+      ExplicitTop = 139
+      ExplicitWidth = 55
     end
     object btnCanselar: TSpeedButton
-      Left = 6
-      Top = 270
-      Width = 55
-      Height = 54
+      AlignWithMargins = True
+      Left = 4
+      Top = 276
+      Width = 56
+      Height = 47
+      Margins.Top = 15
       Action = actCanselar
+      Align = alTop
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
       Font.Height = -13
@@ -301,13 +327,19 @@ inherited FormPadraoCadastro: TFormPadraoCadastro
         FEFEFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF}
       Layout = blGlyphTop
       ParentFont = False
+      ExplicitLeft = 3
+      ExplicitTop = 270
+      ExplicitWidth = 55
     end
     object btnImprimir: TSpeedButton
-      Left = 6
-      Top = 337
-      Width = 55
-      Height = 54
+      AlignWithMargins = True
+      Left = 4
+      Top = 341
+      Width = 56
+      Height = 47
+      Margins.Top = 15
       Action = actImprimir
+      Align = alTop
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
       Font.Height = -13
@@ -372,13 +404,19 @@ inherited FormPadraoCadastro: TFormPadraoCadastro
         EEEEFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF}
       Layout = blGlyphTop
       ParentFont = False
+      ExplicitLeft = 3
+      ExplicitTop = 330
+      ExplicitWidth = 55
     end
     object btnSair: TSpeedButton
-      Left = 6
-      Top = 453
-      Width = 55
-      Height = 54
+      AlignWithMargins = True
+      Left = 4
+      Top = 451
+      Width = 56
+      Height = 47
+      Margins.Top = 60
       Action = actSair
+      Align = alTop
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
       Font.Height = -13
@@ -443,13 +481,18 @@ inherited FormPadraoCadastro: TFormPadraoCadastro
         EBF1E0E7ECDFE5E9DFE6EBDEE6ECDFE7ECDCE5EBE2EAEFFFFFFF}
       Layout = blGlyphTop
       ParentFont = False
+      ExplicitLeft = 6
+      ExplicitTop = 205
     end
     object btnDeletar: TSpeedButton
-      Left = 6
-      Top = 205
-      Width = 55
-      Height = 54
+      AlignWithMargins = True
+      Left = 4
+      Top = 211
+      Width = 56
+      Height = 47
+      Margins.Top = 15
       Action = actExcluir
+      Align = alTop
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
       Font.Height = -13
@@ -514,51 +557,59 @@ inherited FormPadraoCadastro: TFormPadraoCadastro
         F3F1FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF}
       Layout = blGlyphTop
       ParentFont = False
+      ExplicitLeft = 3
+      ExplicitTop = 205
+      ExplicitWidth = 55
     end
   end
   object pgcFormCadastro: TPageControl
     Left = 0
     Top = 0
-    Width = 624
+    Width = 630
     Height = 523
-    ActivePage = tsConsultas
+    ActivePage = tsCadastro
     Align = alClient
     TabOrder = 1
+    ExplicitWidth = 624
     object tsConsultas: TTabSheet
       Caption = 'Consultas'
+      ExplicitWidth = 616
       object pnlConsultas: TPanel
         Left = 0
         Top = 0
-        Width = 616
-        Height = 103
+        Width = 622
+        Height = 97
         Align = alTop
         TabOrder = 0
+        ExplicitWidth = 624
         DesignSize = (
-          616
-          103)
+          622
+          97)
         object gprFiltro: TGroupBox
-          Left = 10
-          Top = 2
-          Width = 185
+          Left = 2
+          Top = 0
+          Width = 191
           Height = 88
           Anchors = [akLeft, akTop, akRight]
           Caption = 'Filtrar Por:'
           TabOrder = 0
+          ExplicitWidth = 193
           DesignSize = (
-            185
+            191
             88)
           object cbxTipoFiltro: TComboBox
             Left = 12
             Top = 26
-            Width = 145
+            Width = 151
             Height = 21
             Anchors = [akLeft, akTop, akRight]
             TabOrder = 0
+            ExplicitWidth = 145
           end
           object cbxModoFiltro: TComboBox
             Left = 12
             Top = 60
-            Width = 145
+            Width = 151
             Height = 21
             Anchors = [akLeft, akTop, akRight]
             TabOrder = 1
@@ -568,23 +619,25 @@ inherited FormPadraoCadastro: TFormPadraoCadastro
               'Contem'
               'Termina'
               'Igual')
+            ExplicitWidth = 145
           end
         end
         object gpbConsultar: TGroupBox
-          Left = 201
-          Top = 2
-          Width = 398
+          Left = 217
+          Top = 0
+          Width = 390
           Height = 91
           Anchors = [akLeft, akTop, akRight]
           Caption = 'Consultar:'
           TabOrder = 1
+          ExplicitWidth = 392
           DesignSize = (
-            398
+            390
             91)
           object btnFiltrar: TSpeedButton
             Left = 280
             Top = 41
-            Width = 97
+            Width = 89
             Height = 27
             Action = actPesquisar
             Anchors = [akLeft, akTop, akRight]
@@ -646,23 +699,25 @@ inherited FormPadraoCadastro: TFormPadraoCadastro
               FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
               FFEFEBEBD8CECFD8CECFDAD0D2E0D7D8F5F2F2FFFFFFFFFFFFFFFFFFFFFFFFFF
               FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF}
+            ExplicitWidth = 97
           end
           object edtConsultas: TEdit
             Left = 19
             Top = 44
-            Width = 238
+            Width = 230
             Height = 21
             Anchors = [akLeft, akTop, akRight]
             TabOrder = 0
             OnChange = edtConsultasChange
+            ExplicitWidth = 238
           end
         end
       end
       object dbConsultas: TDBGrid
         Left = 0
-        Top = 103
-        Width = 616
-        Height = 392
+        Top = 97
+        Width = 622
+        Height = 398
         Align = alClient
         DataSource = dsConsultas
         FixedColor = clHotLight
@@ -686,36 +741,33 @@ inherited FormPadraoCadastro: TFormPadraoCadastro
     object tsCadastro: TTabSheet
       Caption = 'Cadastro'
       ImageIndex = 1
-      ExplicitLeft = 0
-      ExplicitTop = 0
-      ExplicitWidth = 0
-      ExplicitHeight = 496
+      ExplicitWidth = 616
       object pgcCadastro: TPageControl
         Left = 0
-        Top = 49
-        Width = 616
-        Height = 446
+        Top = 43
+        Width = 622
+        Height = 452
         ActivePage = tsCadastroPrincipal
         Align = alClient
         TabOrder = 0
-        ExplicitHeight = 447
+        ExplicitWidth = 624
         object tsCadastroPrincipal: TTabSheet
-          ExplicitLeft = 0
-          ExplicitTop = 0
-          ExplicitWidth = 0
-          ExplicitHeight = 419
+          ExplicitTop = 6
+          ExplicitWidth = 616
+          ExplicitHeight = 451
         end
       end
       object pnlCadastro: TPanel
         Left = 0
         Top = 0
-        Width = 616
-        Height = 49
+        Width = 622
+        Height = 43
         Align = alTop
         TabOrder = 1
+        ExplicitWidth = 624
         object btnPrimeiro: TSpeedButton
           Left = 11
-          Top = 8
+          Top = 0
           Width = 90
           Height = 28
           Action = actPrimeiro
@@ -779,7 +831,7 @@ inherited FormPadraoCadastro: TFormPadraoCadastro
         end
         object btnVoltar: TSpeedButton
           Left = 107
-          Top = 8
+          Top = 0
           Width = 90
           Height = 28
           Action = actVoltar
@@ -843,7 +895,7 @@ inherited FormPadraoCadastro: TFormPadraoCadastro
         end
         object btnAvancar: TSpeedButton
           Left = 204
-          Top = 8
+          Top = 0
           Width = 90
           Height = 28
           Action = actAvancar
@@ -908,7 +960,7 @@ inherited FormPadraoCadastro: TFormPadraoCadastro
         end
         object btnUltimo: TSpeedButton
           Left = 300
-          Top = 8
+          Top = 0
           Width = 90
           Height = 28
           Action = actUltimo

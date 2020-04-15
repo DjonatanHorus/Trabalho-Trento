@@ -19,18 +19,18 @@ object FormMenuPrincipal: TFormMenuPrincipal
   PixelsPerInch = 96
   TextHeight = 13
   object pnlMenuLateral: TPanel
-    Left = 1224
+    Left = 1240
     Top = 0
-    Width = 80
-    Height = 833
+    Width = 64
+    Height = 836
     Align = alRight
     TabOrder = 0
     object btnFinalizarSistema: TSpeedButton
       AlignWithMargins = True
       Left = 4
-      Top = 760
-      Width = 72
-      Height = 69
+      Top = 784
+      Width = 56
+      Height = 48
       Action = actFinalizarSistema
       Align = alBottom
       Glyph.Data = {
@@ -165,9 +165,9 @@ object FormMenuPrincipal: TFormMenuPrincipal
   end
   object pnlBotonBaar: TPanel
     Left = 0
-    Top = 833
+    Top = 836
     Width = 1304
-    Height = 25
+    Height = 22
     Margins.Top = 0
     Align = alBottom
     TabOrder = 1
@@ -175,8 +175,8 @@ object FormMenuPrincipal: TFormMenuPrincipal
       AlignWithMargins = True
       Left = 184
       Top = 1
-      Width = 72
-      Height = 23
+      Width = 61
+      Height = 20
       Margins.Left = 30
       Margins.Top = 0
       Margins.Right = 0
@@ -186,19 +186,19 @@ object FormMenuPrincipal: TFormMenuPrincipal
       Caption = 'Empresa:'
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
-      Font.Height = -15
+      Font.Height = -13
       Font.Name = 'Verdana'
       Font.Style = []
       ParentFont = False
-      ExplicitHeight = 18
+      ExplicitHeight = 16
     end
     object lblUsuario: TLabel
       AlignWithMargins = True
-      Left = 286
+      Left = 315
       Top = 1
-      Width = 72
-      Height = 23
-      Margins.Left = 30
+      Width = 61
+      Height = 20
+      Margins.Left = 70
       Margins.Top = 0
       Margins.Right = 0
       Margins.Bottom = 0
@@ -207,18 +207,19 @@ object FormMenuPrincipal: TFormMenuPrincipal
       Caption = 'Empresa:'
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
-      Font.Height = -15
+      Font.Height = -13
       Font.Name = 'Verdana'
       Font.Style = []
       ParentFont = False
-      ExplicitHeight = 18
+      ExplicitLeft = 275
+      ExplicitHeight = 16
     end
     object lblData: TLabel
       AlignWithMargins = True
-      Left = 1241
+      Left = 1246
       Top = 1
-      Width = 42
-      Height = 23
+      Width = 37
+      Height = 20
       Margins.Left = 0
       Margins.Top = 0
       Margins.Right = 20
@@ -228,32 +229,40 @@ object FormMenuPrincipal: TFormMenuPrincipal
       Caption = 'Data:'
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
-      Font.Height = -15
+      Font.Height = -13
       Font.Name = 'Verdana'
       Font.Style = []
       ParentFont = False
-      ExplicitHeight = 18
+      ExplicitHeight = 16
     end
     object ProgressBar1: TProgressBar
       AlignWithMargins = True
       Left = 4
       Top = 1
       Width = 150
-      Height = 23
+      Height = 20
       Margins.Top = 0
       Margins.Right = 0
       Margins.Bottom = 0
       Align = alLeft
       TabOrder = 0
+      ExplicitHeight = 23
     end
   end
   object dbeImgPlanoFundo: TDBImage
     Left = 0
     Top = 0
-    Width = 1224
-    Height = 833
+    Width = 1240
+    Height = 836
     Align = alClient
+    DataField = 'PLANOFUNDO'
+    DataSource = dsConfigEmpresa
+    Stretch = True
     TabOrder = 2
+    ExplicitLeft = -2
+    ExplicitTop = -3
+    ExplicitWidth = 1224
+    ExplicitHeight = 833
   end
   object MenuTop: TMainMenu
     Left = 1168
@@ -271,6 +280,12 @@ object FormMenuPrincipal: TFormMenuPrincipal
       end
       object actCadUsuario1: TMenuItem
         Action = actCadUsuario
+      end
+      object MATERIAPRIMA1: TMenuItem
+        Action = actCadMateriaPrima
+      end
+      object Receitas1: TMenuItem
+        Action = actCadReceitas
       end
     end
     object RELATRIOS1: TMenuItem
@@ -293,6 +308,9 @@ object FormMenuPrincipal: TFormMenuPrincipal
       object actFinalizarSistema1: TMenuItem
         Action = actFinalizarSistema
       end
+    end
+    object HELP: TMenuItem
+      Action = actHelp
     end
   end
   object actList: TActionList
@@ -321,7 +339,6 @@ object FormMenuPrincipal: TFormMenuPrincipal
     end
     object actFinalizarSistema: TAction
       Category = 'Config'
-      Caption = 'Finalizar sistema'
       ImageIndex = 0
       OnExecute = actFinalizarSistemaExecute
     end
@@ -346,6 +363,28 @@ object FormMenuPrincipal: TFormMenuPrincipal
     end
     object Action5: TAction
       Caption = 'Action5'
+    end
+    object actCaixaVendas: TAction
+      Category = 'Config'
+      Caption = 'Abrir Caixa'
+      ShortCut = 121
+      OnExecute = actCaixaVendasExecute
+    end
+    object actHelp: TAction
+      Category = 'Config'
+      Caption = 'AJUDA'
+      ShortCut = 112
+      OnExecute = actHelpExecute
+    end
+    object actCadMateriaPrima: TAction
+      Category = 'Cadastro'
+      Caption = 'Materia prima'
+      OnExecute = actCadMateriaPrimaExecute
+    end
+    object actCadReceitas: TAction
+      Category = 'Cadastro'
+      Caption = 'Receitas'
+      OnExecute = actCadReceitasExecute
     end
   end
   object ImageList: TImageList
@@ -490,5 +529,25 @@ object FormMenuPrincipal: TFormMenuPrincipal
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
       000000000000}
+  end
+  object SqlConfigUsuario: TFDQuery
+    Connection = DmConexao.FDCon
+    Left = 672
+    Top = 136
+  end
+  object dsConfigEmpresa: TDataSource
+    DataSet = SqlConfEmpresa
+    Left = 832
+    Top = 240
+  end
+  object SqlConfEmpresa: TFDQuery
+    Connection = DmConexao.FDCon
+    Left = 776
+    Top = 128
+  end
+  object Timer: TTimer
+    OnTimer = TimerTimer
+    Left = 1168
+    Top = 296
   end
 end

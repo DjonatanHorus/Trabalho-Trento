@@ -13,7 +13,10 @@ uses
   System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ExtCtrls, System.Actions,
   Vcl.ActnList, Vcl.Menus, Vcl.StdCtrls, Vcl.ComCtrls, Vcl.DBCtrls,
-  System.ImageList, Vcl.ImgList, Vcl.Buttons;
+  System.ImageList, Vcl.ImgList, Vcl.Buttons, FireDAC.Stan.Intf,
+  FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, FireDAC.DatS,
+  FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, FireDAC.DApt,
+  Data.DB, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TFormMenuPrincipal = class(TForm)
@@ -51,12 +54,28 @@ type
     actFinalizarSistema1: TMenuItem;
     btnFinalizarSistema: TSpeedButton;
     ImageList: TImageList;
+    SqlConfigUsuario: TFDQuery;
+    dsConfigEmpresa: TDataSource;
+    SqlConfEmpresa: TFDQuery;
+    actCaixaVendas: TAction;
+    actHelp: TAction;
+    HELP: TMenuItem;
+    actCadMateriaPrima: TAction;
+    MATERIAPRIMA1: TMenuItem;
+    actCadReceitas: TAction;
+    Receitas1: TMenuItem;
+    Timer: TTimer;
     procedure actFinalizarSistemaExecute(Sender: TObject);
     procedure FormShow(Sender: TObject);
     procedure actCadProdutoExecute(Sender: TObject);
     procedure actCadFornecedorExecute(Sender: TObject);
     procedure actCadClienteExecute(Sender: TObject);
     procedure actCadUsuarioExecute(Sender: TObject);
+    procedure actCaixaVendasExecute(Sender: TObject);
+    procedure actHelpExecute(Sender: TObject);
+    procedure actCadMateriaPrimaExecute(Sender: TObject);
+    procedure actCadReceitasExecute(Sender: TObject);
+    procedure TimerTimer(Sender: TObject);
   private
     procedure SetConfigInicial;
   end;
@@ -68,7 +87,8 @@ implementation
 
 uses
   UnTypesGeral, UnFormCadastroProdutos, UnFormCadastroFornecedor,
-  UnFormCadastroCliente, UnformCadastroUsuario;
+  UnFormCadastroCliente, UnformCadastroUsuario, UnDmConexao, UnFormCaixaVendas,
+  ShellApi, UnFormCadastroMateriaPrima, UnFormCadastroReceitas;
 
 {$R *.dfm}
 
@@ -97,6 +117,18 @@ begin
 end;
 
 { ------------------------------------------------------
+  METODO: actCadMateriaPrimaExecute
+  AUTOR: Djonatan Willenz
+  OBJETIVO: Abrir formulario de cadastro de materia prima.
+  DATA: 13/04/2020
+  NOTAS: Criação do método.
+  ------------------------------------------------------ }
+procedure TFormMenuPrincipal.actCadMateriaPrimaExecute(Sender: TObject);
+begin
+  TGTypeGeral.CarregarFormulario(TFormCadastroMateriaPrima);
+end;
+
+{ ------------------------------------------------------
   METODO: actCadProdutoExecute
   AUTOR: Djonatan Willenz
   OBJETIVO: Abrir formulario de cadastro de produtos.
@@ -106,6 +138,18 @@ end;
 procedure TFormMenuPrincipal.actCadProdutoExecute(Sender: TObject);
 begin
   TGTypeGeral.CarregarFormulario(TFormCadastroProdutos);
+end;
+
+{ ------------------------------------------------------
+  METODO: actCadReceitasExecute
+  AUTOR: Djonatan Willenz
+  OBJETIVO: Abrir formulario de cadastro de receitas.
+  DATA: 13/04/2020
+  NOTAS: Criação do método.
+  ------------------------------------------------------ }
+procedure TFormMenuPrincipal.actCadReceitasExecute(Sender: TObject);
+begin
+  TGTypeGeral.CarregarFormulario(TFormCadastroReceitas);
 end;
 
 { ------------------------------------------------------
@@ -121,15 +165,45 @@ begin
 end;
 
 { ------------------------------------------------------
+  METODO: actCaixaVendasExecute
+  AUTOR: Djonatan Willenz
+  OBJETIVO: Abrir formulario caixa de vendas.
+  DATA: 13/04/2020
+  NOTAS: Criação do método.
+  ------------------------------------------------------ }
+procedure TFormMenuPrincipal.actCaixaVendasExecute(Sender: TObject);
+begin
+  TGTypeGeral.CarregarFormulario(TFormCaixaVenda);
+
+end;
+
+{ ------------------------------------------------------
   METODO: actFinalizarSistemaExecute
   AUTOR: Djonatan Willenz
   OBJETIVO: Finalizar o sistema.
   DATA: 13/04/2020
-  NOTAS: Criação do método.
-  ------------------------------------------------------ }
+  NOTAS: 13/04/2020 - Criação do método.
+  NOTAS: 15/04/2020 - Adicionado validação para finalizar sistema.
+  ---------------------------------------------------------------- }
 procedure TFormMenuPrincipal.actFinalizarSistemaExecute(Sender: TObject);
 begin
-  close;
+  if MessageDlg('Deseja finalizar o sistema', mtConfirmation, [mbYes, mbNo],
+    MB_YESNO) = mrYes then
+    close;
+end;
+
+{ ------------------------------------------------------
+  METODO: actHelpExecute
+  AUTOR: Djonatan Willenz
+  OBJETIVO: Abrir help do sistema.
+  DATA: 13/04/2020
+  NOTAS: 13/04/2020 - Criação do método.
+  ---------------------------------------------------------------- }
+procedure TFormMenuPrincipal.actHelpExecute(Sender: TObject);
+begin
+  ShellExecute(Application.Handle, nil,
+    'C:\Trabalho-Trento\Projeto Delphi\Documentação\Help\index.html', nil, nil,
+    SW_SHOWNORMAL);
 end;
 
 { ------------------------------------------------------
@@ -153,7 +227,35 @@ end;
   ------------------------------------------------------ }
 procedure TFormMenuPrincipal.SetConfigInicial;
 begin
-  lblData.Caption := 'Data: ' + DateToStr(now);
+
+  SqlConfigUsuario.close;
+  SqlConfigUsuario.SQL.Add('SELECT * FROM USUARIO WHERE IDUSUARIO = 1');
+  SqlConfigUsuario.Open();
+
+  SqlConfEmpresa.close;
+  SqlConfEmpresa.SQL.Add('SELECT * FROM EMPRESA WHERE EMPRESA.IDEMPRESA = 1');
+  SqlConfEmpresa.Open();
+
+  lblUsuario.Caption := format('USUARIO: %S-%S', [
+    { 0 } FormatCurr('00000', SqlConfigUsuario.FieldByName('IDUSUARIO')
+    .AsInteger),
+    { 1 } SqlConfigUsuario.FieldByName('NOME').AsString]);
+
+  lblEmpresa.Caption := format('EMPRESA: %S-%S', [
+    { 0 } FormatCurr('00000', SqlConfEmpresa.FieldByName('CODEMPRESA').AsFloat),
+    { 1 } SqlConfEmpresa.FieldByName('NOME').AsString]);
+end;
+
+{ ------------------------------------------------------
+  METODO: TimerTimer
+  AUTOR: Djonatan Willenz
+  OBJETIVO: Eventos para atualizar constantemente.
+  DATA: 13/04/2020
+  NOTAS: Criação do método.
+  ------------------------------------------------------ }
+procedure TFormMenuPrincipal.TimerTimer(Sender: TObject);
+begin
+  lblData.Caption := DateTimeToStr(now);
 end;
 
 end.

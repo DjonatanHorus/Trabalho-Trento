@@ -3,22 +3,53 @@ unit UnFormInicializaSistema;
 interface
 
 uses
-  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
-  Vcl.Controls, Vcl.Forms, Vcl.Dialogs;
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants,
+  System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ExtCtrls, Vcl.ComCtrls;
 
 type
-  TForm2 = class(TForm)
+  TFormInicial = class(TForm)
+    pgbProgress: TProgressBar;
+    Time: TTimer;
+    procedure TimeTimer(Sender: TObject);
   private
-    { Private declarations }
+    procedure AbrirFormMenuPrincipal;
   public
     { Public declarations }
   end;
 
 var
-  Form2: TForm2;
+  FormInicial: TFormInicial;
 
 implementation
 
+uses
+  UnTypesGeral, UnFormMenuPrincipal;
 {$R *.dfm}
+{ ------------------------------------------------------
+  METODO: TimeTimer
+  AUTOR: Djonatan Willenz
+  OBJETIVO:
+  OBJETIVO: Delay para abrir menu.
+  DATA: 13/04/2020
+  NOTAS: Criação do método.
+  ------------------------------------------------------ }
+
+procedure TFormInicial.TimeTimer(Sender: TObject);
+begin
+end;
+
+{ ------------------------------------------------------
+  METODO: AbrirFormMenuPrincipal
+  AUTOR: Djonatan Willenz
+  OBJETIVO:
+  OBJETIVO: Instanciar e executar formulario do menu principal.
+  DATA: 13/04/2020
+  NOTAS: Criação do método.
+  ------------------------------------------------------ }
+Procedure TFormInicial.AbrirFormMenuPrincipal;
+begin
+  TGTypeGeral.CarregarFormulario(TFormMenuPrincipal);
+end;
 
 end.
