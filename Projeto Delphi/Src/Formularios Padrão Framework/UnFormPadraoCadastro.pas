@@ -183,7 +183,7 @@ begin
     // SqlCadastro.ApplyUpdates(-1);
     SetConfigInicial;
     tsConsultas.Show;
-   // TGTypeGeral.SetFocusCampo(Sender, edtConsultas);
+    // TGTypeGeral.SetFocusCampo(Sender, edtConsultas);
   end;
 end;
 

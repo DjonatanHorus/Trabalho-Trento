@@ -22,7 +22,6 @@ inherited FormPadraoCadastro: TFormPadraoCadastro
     Margins.Right = 0
     Align = alRight
     TabOrder = 0
-    ExplicitHeight = 523
     object btnNovo: TSpeedButton
       AlignWithMargins = True
       Left = 4
@@ -570,10 +569,8 @@ inherited FormPadraoCadastro: TFormPadraoCadastro
     ActivePage = tsCadastro
     Align = alClient
     TabOrder = 1
-    ExplicitWidth = 624
     object tsConsultas: TTabSheet
       Caption = 'Consultas'
-      ExplicitWidth = 616
       object pnlConsultas: TPanel
         Left = 0
         Top = 0
@@ -581,7 +578,6 @@ inherited FormPadraoCadastro: TFormPadraoCadastro
         Height = 97
         Align = alTop
         TabOrder = 0
-        ExplicitWidth = 624
         DesignSize = (
           622
           97)
@@ -593,7 +589,6 @@ inherited FormPadraoCadastro: TFormPadraoCadastro
           Anchors = [akLeft, akTop, akRight]
           Caption = 'Filtrar Por:'
           TabOrder = 0
-          ExplicitWidth = 193
           DesignSize = (
             191
             88)
@@ -604,7 +599,6 @@ inherited FormPadraoCadastro: TFormPadraoCadastro
             Height = 21
             Anchors = [akLeft, akTop, akRight]
             TabOrder = 0
-            ExplicitWidth = 145
           end
           object cbxModoFiltro: TComboBox
             Left = 12
@@ -619,7 +613,6 @@ inherited FormPadraoCadastro: TFormPadraoCadastro
               'Contem'
               'Termina'
               'Igual')
-            ExplicitWidth = 145
           end
         end
         object gpbConsultar: TGroupBox
@@ -630,7 +623,6 @@ inherited FormPadraoCadastro: TFormPadraoCadastro
           Anchors = [akLeft, akTop, akRight]
           Caption = 'Consultar:'
           TabOrder = 1
-          ExplicitWidth = 392
           DesignSize = (
             390
             91)
@@ -709,7 +701,6 @@ inherited FormPadraoCadastro: TFormPadraoCadastro
             Anchors = [akLeft, akTop, akRight]
             TabOrder = 0
             OnChange = edtConsultasChange
-            ExplicitWidth = 238
           end
         end
       end
@@ -741,7 +732,6 @@ inherited FormPadraoCadastro: TFormPadraoCadastro
     object tsCadastro: TTabSheet
       Caption = 'Cadastro'
       ImageIndex = 1
-      ExplicitWidth = 616
       object pgcCadastro: TPageControl
         Left = 0
         Top = 43
@@ -750,11 +740,7 @@ inherited FormPadraoCadastro: TFormPadraoCadastro
         ActivePage = tsCadastroPrincipal
         Align = alClient
         TabOrder = 0
-        ExplicitWidth = 624
         object tsCadastroPrincipal: TTabSheet
-          ExplicitTop = 6
-          ExplicitWidth = 616
-          ExplicitHeight = 451
         end
       end
       object pnlCadastro: TPanel
@@ -764,7 +750,6 @@ inherited FormPadraoCadastro: TFormPadraoCadastro
         Height = 43
         Align = alTop
         TabOrder = 1
-        ExplicitWidth = 624
         object btnPrimeiro: TSpeedButton
           Left = 11
           Top = 0
@@ -1067,6 +1052,7 @@ inherited FormPadraoCadastro: TFormPadraoCadastro
     end
   end
   object SqlCadastro: TFDQuery
+    Connection = DmConexao.FDCon
     SQL.Strings = (
       'SELECT *'
       ' FROM USUARIOS')
@@ -1134,6 +1120,7 @@ inherited FormPadraoCadastro: TFormPadraoCadastro
     Top = 457
   end
   object SQLConsultas: TFDQuery
+    Connection = DmConexao.FDCon
     Left = 344
     Top = 456
   end
