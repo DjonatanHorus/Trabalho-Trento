@@ -266,7 +266,7 @@ object FormMenuPrincipal: TFormMenuPrincipal
   end
   object MenuTop: TMainMenu
     Left = 1168
-    Top = 88
+    Top = 112
     object CADASTROS1: TMenuItem
       Caption = 'CADASTROS'
       object actCadCliente1: TMenuItem
@@ -532,17 +532,17 @@ object FormMenuPrincipal: TFormMenuPrincipal
   end
   object SqlConfigUsuario: TFDQuery
     Connection = DmConexao.FDCon
-    Left = 672
-    Top = 136
+    Left = 1056
+    Top = 256
   end
   object dsConfigEmpresa: TDataSource
     DataSet = SqlConfEmpresa
-    Left = 832
-    Top = 240
+    Left = 1056
+    Top = 200
   end
   object SqlConfEmpresa: TFDQuery
     Connection = DmConexao.FDCon
-    Left = 776
+    Left = 1056
     Top = 128
   end
   object Timer: TTimer
