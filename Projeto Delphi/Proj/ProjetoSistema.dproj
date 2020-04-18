@@ -119,7 +119,7 @@
         <DCCReference Include="..\Src\Units Types Geral\UnTypesGeral.pas"/>
         <DCCReference Include="..\Src\Units Types Geral\UnTypesValidacoes.pas"/>
         <DCCReference Include="..\Src\Units Types Geral\UnDmTypes.pas">
-            <Form>DataModule2</Form>
+            <Form>DmConsultas</Form>
             <FormType>dfm</FormType>
             <DesignClass>TDataModule</DesignClass>
         </DCCReference>
@@ -161,7 +161,7 @@
             <FormType>dfm</FormType>
         </DCCReference>
         <DCCReference Include="..\Src\Orçamentos\UnFormOrcamentosPedidos.pas">
-            <Form>Form3</Form>
+            <Form>FormOrcamentos</Form>
             <FormType>dfm</FormType>
         </DCCReference>
         <DCCReference Include="..\Src\Calcular Margem de Lucro\UnFormCalcularMagemLucro.pas">
@@ -169,7 +169,7 @@
             <FormType>dfm</FormType>
         </DCCReference>
         <DCCReference Include="..\Src\Configurações\UnFormConfiguracoes.pas">
-            <Form>Form2</Form>
+            <Form>FormConfiguracoes</Form>
             <FormType>dfm</FormType>
         </DCCReference>
         <BuildConfiguration Include="Release">

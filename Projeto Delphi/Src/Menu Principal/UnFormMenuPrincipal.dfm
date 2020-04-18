@@ -211,7 +211,6 @@ object FormMenuPrincipal: TFormMenuPrincipal
       Font.Name = 'Verdana'
       Font.Style = []
       ParentFont = False
-      ExplicitLeft = 275
       ExplicitHeight = 16
     end
     object lblData: TLabel
@@ -246,7 +245,6 @@ object FormMenuPrincipal: TFormMenuPrincipal
       Margins.Bottom = 0
       Align = alLeft
       TabOrder = 0
-      ExplicitHeight = 23
     end
   end
   object dbeImgPlanoFundo: TDBImage
@@ -260,13 +258,11 @@ object FormMenuPrincipal: TFormMenuPrincipal
     Stretch = True
     TabOrder = 2
     ExplicitLeft = -2
-    ExplicitTop = -3
-    ExplicitWidth = 1224
-    ExplicitHeight = 833
+    ExplicitTop = -2
   end
   object MenuTop: TMainMenu
-    Left = 1168
-    Top = 112
+    Left = 1192
+    Top = 8
     object CADASTROS1: TMenuItem
       Caption = 'CADASTROS'
       object actCadCliente1: TMenuItem
@@ -299,6 +295,9 @@ object FormMenuPrincipal: TFormMenuPrincipal
       object actRelVendas1: TMenuItem
         Action = actRelVendas
       end
+      object Oramento1: TMenuItem
+        Action = actGerarOrcamento
+      end
     end
     object CNFIGURAES1: TMenuItem
       Caption = 'CONFIGURA'#199#213'ES'
@@ -307,6 +306,7 @@ object FormMenuPrincipal: TFormMenuPrincipal
       end
       object actFinalizarSistema1: TMenuItem
         Action = actFinalizarSistema
+        Caption = 'Finaliza Sistema'
       end
     end
     object HELP: TMenuItem
@@ -315,8 +315,8 @@ object FormMenuPrincipal: TFormMenuPrincipal
   end
   object actList: TActionList
     Images = ImageList
-    Left = 1168
-    Top = 168
+    Left = 1136
+    Top = 8
     object actCadProduto: TAction
       Category = 'Cadastro'
       Caption = 'Produto'
@@ -345,6 +345,7 @@ object FormMenuPrincipal: TFormMenuPrincipal
     object actConfiguracoes: TAction
       Category = 'Config'
       Caption = 'Configura'#231#245'es'
+      OnExecute = actConfiguracoesExecute
     end
     object actRelVendas: TAction
       Category = 'Relat'#243'rios'
@@ -386,10 +387,15 @@ object FormMenuPrincipal: TFormMenuPrincipal
       Caption = 'Receitas'
       OnExecute = actCadReceitasExecute
     end
+    object actGerarOrcamento: TAction
+      Category = 'Config'
+      Caption = 'Or'#231'amento'
+      OnExecute = actGerarOrcamentoExecute
+    end
   end
   object ImageList: TImageList
-    Left = 1168
-    Top = 232
+    Left = 1080
+    Top = 8
     Bitmap = {
       494C010101000800040010001000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000400000001000000001002000000000000010
@@ -532,22 +538,22 @@ object FormMenuPrincipal: TFormMenuPrincipal
   end
   object SqlConfigUsuario: TFDQuery
     Connection = DmConexao.FDCon
-    Left = 1056
-    Top = 256
+    Left = 792
+    Top = 8
   end
   object dsConfigEmpresa: TDataSource
     DataSet = SqlConfEmpresa
-    Left = 1056
-    Top = 200
+    Left = 872
+    Top = 8
   end
   object SqlConfEmpresa: TFDQuery
     Connection = DmConexao.FDCon
-    Left = 1056
-    Top = 128
+    Left = 952
+    Top = 8
   end
   object Timer: TTimer
     OnTimer = TimerTimer
-    Left = 1168
-    Top = 296
+    Left = 1016
+    Top = 8
   end
 end

@@ -1,10 +1,15 @@
 object FormCaixaVenda: TFormCaixaVenda
+  AlignWithMargins = True
   Left = 0
   Top = 0
+  Margins.Left = 1
+  Margins.Top = 1
+  Margins.Right = 0
+  Margins.Bottom = 0
   BorderIcons = []
   BorderStyle = bsNone
-  ClientHeight = 431
-  ClientWidth = 665
+  ClientHeight = 554
+  ClientWidth = 925
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -15,4 +20,184 @@ object FormCaixaVenda: TFormCaixaVenda
   WindowState = wsMaximized
   PixelsPerInch = 96
   TextHeight = 13
+  object Panel2: TPanel
+    Left = 0
+    Top = 0
+    Width = 925
+    Height = 554
+    Align = alClient
+    TabOrder = 0
+    ExplicitLeft = 1
+    ExplicitTop = 1
+    ExplicitWidth = 797
+    ExplicitHeight = 552
+    object Panel3: TPanel
+      AlignWithMargins = True
+      Left = 2
+      Top = 2
+      Width = 922
+      Height = 56
+      Margins.Left = 1
+      Margins.Top = 1
+      Margins.Right = 0
+      Margins.Bottom = 0
+      Align = alTop
+      Color = clBlue
+      ParentBackground = False
+      TabOrder = 0
+      ExplicitLeft = 3
+      ExplicitTop = 6
+      ExplicitWidth = 796
+      object Label1: TLabel
+        Left = 23
+        Top = 0
+        Width = 276
+        Height = 58
+        Caption = 'CAIXA LIVRE'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -48
+        Font.Name = 'Tahoma'
+        Font.Style = []
+        ParentFont = False
+      end
+    end
+    object Panel4: TPanel
+      AlignWithMargins = True
+      Left = 2
+      Top = 59
+      Width = 319
+      Height = 356
+      Margins.Left = 1
+      Margins.Top = 1
+      Margins.Right = 0
+      Margins.Bottom = 0
+      Align = alLeft
+      Color = clYellow
+      ParentBackground = False
+      TabOrder = 1
+      ExplicitLeft = 1
+      ExplicitHeight = 388
+      object lblBuscar: TPanel
+        AlignWithMargins = True
+        Left = 6
+        Top = 36
+        Width = 307
+        Height = 163
+        Margins.Left = 5
+        Margins.Top = 35
+        Margins.Right = 5
+        Margins.Bottom = 5
+        Align = alTop
+        BorderStyle = bsSingle
+        Color = clWhite
+        ParentBackground = False
+        TabOrder = 0
+        ExplicitTop = 6
+      end
+    end
+    object Panel5: TPanel
+      AlignWithMargins = True
+      Left = 322
+      Top = 59
+      Width = 602
+      Height = 356
+      Margins.Left = 1
+      Margins.Top = 1
+      Margins.Right = 0
+      Margins.Bottom = 0
+      Align = alClient
+      Color = clHighlight
+      ParentBackground = False
+      TabOrder = 2
+      ExplicitLeft = 240
+      ExplicitWidth = 558
+      ExplicitHeight = 428
+      object DBGrid1: TDBGrid
+        Left = 1
+        Top = 1
+        Width = 600
+        Height = 332
+        Align = alClient
+        Color = cl3DDkShadow
+        FixedColor = clAppWorkSpace
+        GradientEndColor = clGray
+        GradientStartColor = clGrayText
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -11
+        Font.Name = 'Tahoma'
+        Font.Style = []
+        ParentFont = False
+        ReadOnly = True
+        TabOrder = 0
+        TitleFont.Charset = DEFAULT_CHARSET
+        TitleFont.Color = clWindowText
+        TitleFont.Height = -13
+        TitleFont.Name = 'Tahoma'
+        TitleFont.Pitch = fpVariable
+        TitleFont.Style = []
+        TitleFont.Quality = fqAntialiased
+      end
+      object pnlTotais: TPanel
+        Left = 1
+        Top = 333
+        Width = 600
+        Height = 22
+        Margins.Left = 1
+        Margins.Top = 1
+        Margins.Right = 1
+        Margins.Bottom = 1
+        Align = alBottom
+        BorderStyle = bsSingle
+        Color = clWhite
+        ParentBackground = False
+        TabOrder = 1
+        ExplicitLeft = 6
+        ExplicitTop = 328
+        ExplicitWidth = 590
+      end
+    end
+    object Panel6: TPanel
+      AlignWithMargins = True
+      Left = 2
+      Top = 416
+      Width = 922
+      Height = 137
+      Margins.Left = 1
+      Margins.Top = 1
+      Margins.Right = 0
+      Margins.Bottom = 0
+      Align = alBottom
+      Color = clYellow
+      ParentBackground = False
+      TabOrder = 3
+      object Panel1: TPanel
+        Left = 1
+        Top = 112
+        Width = 920
+        Height = 24
+        Align = alBottom
+        TabOrder = 0
+        ExplicitTop = 56
+        ExplicitWidth = 794
+      end
+      object pnlSubtotal: TPanel
+        AlignWithMargins = True
+        Left = 616
+        Top = 6
+        Width = 275
+        Height = 101
+        Margins.Left = 5
+        Margins.Top = 5
+        Margins.Right = 30
+        Margins.Bottom = 5
+        Align = alRight
+        BorderStyle = bsSingle
+        Color = clWhite
+        ParentBackground = False
+        TabOrder = 1
+      end
+    end
+  end
 end

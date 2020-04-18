@@ -65,6 +65,8 @@ type
     actCadReceitas: TAction;
     Receitas1: TMenuItem;
     Timer: TTimer;
+    actGerarOrcamento: TAction;
+    Oramento1: TMenuItem;
     procedure actFinalizarSistemaExecute(Sender: TObject);
     procedure FormShow(Sender: TObject);
     procedure actCadProdutoExecute(Sender: TObject);
@@ -76,6 +78,8 @@ type
     procedure actCadMateriaPrimaExecute(Sender: TObject);
     procedure actCadReceitasExecute(Sender: TObject);
     procedure TimerTimer(Sender: TObject);
+    procedure actConfiguracoesExecute(Sender: TObject);
+    procedure actGerarOrcamentoExecute(Sender: TObject);
   private
     procedure SetConfigInicial;
   end;
@@ -88,7 +92,8 @@ implementation
 uses
   UnTypesGeral, UnFormCadastroProdutos, UnFormCadastroFornecedor,
   UnFormCadastroCliente, UnformCadastroUsuario, UnDmConexao, UnFormCaixaVendas,
-  ShellApi, UnFormCadastroMateriaPrima, UnFormCadastroReceitas;
+  ShellApi, UnFormCadastroMateriaPrima, UnFormCadastroReceitas,
+  UnFormConfiguracoes, UnFormOrcamentosPedidos;
 
 {$R *.dfm}
 
@@ -174,7 +179,18 @@ end;
 procedure TFormMenuPrincipal.actCaixaVendasExecute(Sender: TObject);
 begin
   TGTypeGeral.CarregarFormulario(TFormCaixaVenda);
+end;
 
+{ ------------------------------------------------------
+  METODO: actConfiguracoesExecute
+  AUTOR: Djonatan Willenz
+  OBJETIVO: Abrir formulario Configuracoes.
+  DATA: 13/04/2020
+  NOTAS: Criação do método.
+  ------------------------------------------------------ }
+procedure TFormMenuPrincipal.actConfiguracoesExecute(Sender: TObject);
+begin
+  TGTypeGeral.CarregarFormulario(TFormConfiguracoes);
 end;
 
 { ------------------------------------------------------
@@ -190,6 +206,18 @@ begin
   if MessageDlg('Deseja finalizar o sistema', mtConfirmation, [mbYes, mbNo],
     MB_YESNO) = mrYes then
     close;
+end;
+
+{ ------------------------------------------------------
+  METODO: actGerarOrcamentoExecute
+  AUTOR: Djonatan Willenz
+  OBJETIVO: Abrir formulario de cadastro de Orcamentos.
+  DATA: 13/04/2020
+  NOTAS: Criação do método.
+  ------------------------------------------------------ }
+procedure TFormMenuPrincipal.actGerarOrcamentoExecute(Sender: TObject);
+begin
+  TGTypeGeral.CarregarFormulario(TFormOrcamentos);
 end;
 
 { ------------------------------------------------------

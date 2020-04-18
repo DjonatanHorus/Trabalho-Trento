@@ -1,9 +1,5 @@
 program ProjetoSistema;
 
-
-
-
-
 uses
   Vcl.Forms,
   UnFormMenuPrincipal in '..\Src\Menu Principal\UnFormMenuPrincipal.pas' {FormMenuPrincipal},
@@ -13,7 +9,7 @@ uses
   UnFormInicializaSistema in '..\Src\Tela Inicialização Sistema\UnFormInicializaSistema.pas' {FormInicial},
   UnTypesGeral in '..\Src\Units Types Geral\UnTypesGeral.pas',
   UnTypesValidacoes in '..\Src\Units Types Geral\UnTypesValidacoes.pas',
-  UnDmTypes in '..\Src\Units Types Geral\UnDmTypes.pas' {DataModule2: TDataModule},
+  UnDmTypes in '..\Src\Units Types Geral\UnDmTypes.pas' {DmConsultas: TDataModule},
   UnFormPadraoFramework in '..\Src\Formularios Padrão Framework\UnFormPadraoFramework.pas' {FormPadraoFramwork},
   UnFormCadastroProdutos in '..\Src\Cadastro de Produtos\UnFormCadastroProdutos.pas' {FormCadastroProdutos},
   UnFormCadastroCliente in '..\Src\Cadastro de Cliente\UnFormCadastroCliente.pas' {FormCadastroCliente},
@@ -24,9 +20,9 @@ uses
   UnFormCaixaVendas in '..\Src\Tela de Caixa vendas\UnFormCaixaVendas.pas' {FormCaixaVenda},
   UnFormCadastroMateriaPrima in '..\Src\Cadastro de Materia Prima\UnFormCadastroMateriaPrima.pas' {FormCadastroMateriaPrima},
   UnFormCadastroReceitas in '..\Src\Cadastro de Receitas\UnFormCadastroReceitas.pas' {FormCadastroReceitas},
-  UnFormOrcamentosPedidos in '..\Src\Orçamentos\UnFormOrcamentosPedidos.pas' {Form3},
+  UnFormOrcamentosPedidos in '..\Src\Orçamentos\UnFormOrcamentosPedidos.pas' {FormOrcamentos},
   UnFormCalcularMagemLucro in '..\Src\Calcular Margem de Lucro\UnFormCalcularMagemLucro.pas' {Form4},
-  UnFormConfiguracoes in '..\Src\Configurações\UnFormConfiguracoes.pas' {Form2};
+  UnFormConfiguracoes in '..\Src\Configurações\UnFormConfiguracoes.pas' {FormConfiguracoes};
 
 {$R *.res}
 
@@ -36,9 +32,10 @@ begin
   Application.CreateForm(TDmConexao, DmConexao);
   Application.CreateForm(TDmMenuPrincipal, DmMenuPrincipal);
   Application.CreateForm(TFormMenuPrincipal, FormMenuPrincipal);
-  Application.CreateForm(TForm2, Form2);
-  Application.CreateForm(TForm3, Form3);
+  Application.CreateForm(TFormConfiguracoes, FormConfiguracoes);
+  Application.CreateForm(TFormOrcamentos, FormOrcamentos);
   Application.CreateForm(TForm4, Form4);
-  Application.CreateForm(TForm2, Form2);
+  Application.CreateForm(TFormConfiguracoes, FormConfiguracoes);
   Application.Run;
+
 end.

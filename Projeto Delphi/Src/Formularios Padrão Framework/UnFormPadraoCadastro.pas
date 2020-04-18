@@ -1,3 +1,19 @@
+{ ------------------------------------------------------
+
+
+
+
+
+
+
+
+  UNIT: UnFormPadraoCadastro
+  AUTOR: Djonatan Willenz
+  OBJETIVO:
+  DATA: 13/04/2020
+  NOTAS: Criação do método.
+  ------------------------------------------------------ }
+
 unit UnFormPadraoCadastro;
 
 interface
@@ -90,6 +106,8 @@ type
       ANomeCampo, ATextoEmail: string); virtual;
     procedure CarregarBarraProgresso; virtual;
     procedure ControlaLabelStatusFrom;
+    procedure ValidarCampos; virtual;
+    procedure InserirValoresFields; virtual;
   end;
 
 var
@@ -105,11 +123,37 @@ var
   I: integer;
 {$R *.dfm}
 
+  { ------------------------------------------------------
+    METODO: ValidarCampos
+    AUTOR: Djonatan Willenz
+    OBJETIVO:
+    DATA: 13/04/2020
+    NOTAS: Criação do método.
+    ------------------------------------------------------ }
+procedure TFormPadraoCadastro.ValidarCampos;
+begin
+
+end;
+
+{ ------------------------------------------------------
+  METODO: actAvancarExecute
+  AUTOR: Djonatan Willenz
+  OBJETIVO:
+  DATA: 13/04/2020
+  NOTAS: Criação do método.
+  ------------------------------------------------------ }
 procedure TFormPadraoCadastro.actAvancarExecute(Sender: TObject);
 begin
   SqlCadastro.Next;
 end;
 
+{ ------------------------------------------------------
+  METODO: actCanselarExecute
+  AUTOR: Djonatan Willenz
+  OBJETIVO:
+  DATA: 13/04/2020
+  NOTAS: Criação do método.
+  ------------------------------------------------------ }
 procedure TFormPadraoCadastro.actCanselarExecute(Sender: TObject);
 begin
   SqlCadastro.Cancel;
@@ -118,12 +162,26 @@ begin
   CarregarBarraProgresso;
 end;
 
+{ ------------------------------------------------------
+  METODO: actEditarExecute
+  AUTOR: Djonatan Willenz
+  OBJETIVO:
+  DATA: 13/04/2020
+  NOTAS: Criação do método.
+  ------------------------------------------------------ }
 procedure TFormPadraoCadastro.actEditarExecute(Sender: TObject);
 begin
   SqlCadastro.Edit;
   SetConfigInicial;
 end;
 
+{ ------------------------------------------------------
+  METODO: actExcluirExecute
+  AUTOR: Djonatan Willenz
+  OBJETIVO:
+  DATA: 13/04/2020
+  NOTAS: Criação do método.
+  ------------------------------------------------------ }
 procedure TFormPadraoCadastro.actExcluirExecute(Sender: TObject);
 begin
   if MessageDlg('Deseja Excluir o Registro ?', mtInformation, mbYesNo, 0, mbYes)
@@ -140,11 +198,25 @@ begin
   end;
 end;
 
+{ ------------------------------------------------------
+  METODO: actImprimirExecute
+  AUTOR: Djonatan Willenz
+  OBJETIVO:
+  DATA: 13/04/2020
+  NOTAS: Criação do método.
+  ------------------------------------------------------ }
 procedure TFormPadraoCadastro.actImprimirExecute(Sender: TObject);
 begin
   ShowMessage('Não Disponivel nesta Versão!!');
 end;
 
+{ ------------------------------------------------------
+  METODO: actNovoExecute
+  AUTOR: Djonatan Willenz
+  OBJETIVO:
+  DATA: 13/04/2020
+  NOTAS: Criação do método.
+  ------------------------------------------------------ }
 procedure TFormPadraoCadastro.actNovoExecute(Sender: TObject);
 begin
   tsCadastro.Show;
@@ -152,11 +224,25 @@ begin
   SetConfigInicial;
 end;
 
+{ ------------------------------------------------------
+  METODO: actPrimeiroExecute
+  AUTOR: Djonatan Willenz
+  OBJETIVO:
+  DATA: 13/04/2020
+  NOTAS: Criação do método.
+  ------------------------------------------------------ }
 procedure TFormPadraoCadastro.actPrimeiroExecute(Sender: TObject);
 begin
   SqlCadastro.First;
 end;
 
+{ ------------------------------------------------------
+  METODO: actSairExecute
+  AUTOR: Djonatan Willenz
+  OBJETIVO:
+  DATA: 13/04/2020
+  NOTAS: Criação do método.
+  ------------------------------------------------------ }
 procedure TFormPadraoCadastro.actSairExecute(Sender: TObject);
 begin
   if SqlCadastro.State in [dsEdit, dsInsert] then
@@ -172,6 +258,13 @@ begin
     Close;
 end;
 
+{ ------------------------------------------------------
+  METODO: actSalvarExecute
+  AUTOR: Djonatan Willenz
+  OBJETIVO:
+  DATA: 13/04/2020
+  NOTAS: Criação do método.
+  ------------------------------------------------------ }
 procedure TFormPadraoCadastro.actSalvarExecute(Sender: TObject);
 begin
   CarregarBarraProgresso;
@@ -187,16 +280,37 @@ begin
   end;
 end;
 
+{ ------------------------------------------------------
+  METODO: actUltimoExecute
+  AUTOR: Djonatan Willenz
+  OBJETIVO:
+  DATA: 13/04/2020
+  NOTAS: Criação do método.
+  ------------------------------------------------------ }
 procedure TFormPadraoCadastro.actUltimoExecute(Sender: TObject);
 begin
   SqlCadastro.Last;
 end;
 
+{ ------------------------------------------------------
+  METODO: actVoltarExecute
+  AUTOR: Djonatan Willenz
+  OBJETIVO:
+  DATA: 13/04/2020
+  NOTAS: Criação do método.
+  ------------------------------------------------------ }
 procedure TFormPadraoCadastro.actVoltarExecute(Sender: TObject);
 begin
   SqlCadastro.Prior;
 end;
 
+{ ------------------------------------------------------
+  METODO: CarregarBarraProgresso
+  AUTOR: Djonatan Willenz
+  OBJETIVO:
+  DATA: 13/04/2020
+  NOTAS: Criação do método.
+  ------------------------------------------------------ }
 procedure TFormPadraoCadastro.CarregarBarraProgresso;
 var
   I: integer;
@@ -211,6 +325,13 @@ begin
   pgbAguarde.Position := 0;
 end;
 
+{ ------------------------------------------------------
+  METODO: CarregarItemComboBox
+  AUTOR: Djonatan Willenz
+  OBJETIVO:
+  DATA: 13/04/2020
+  NOTAS: Criação do método.
+  ------------------------------------------------------ }
 procedure TFormPadraoCadastro.CarregarItemComboBox(ATextExibicao,
   ANomeItem: string);
 begin
@@ -219,6 +340,13 @@ begin
   I := I + 1;
 end;
 
+{ ------------------------------------------------------
+  METODO: ConfigVisual
+  AUTOR: Djonatan Willenz
+  OBJETIVO:
+  DATA: 13/04/2020
+  NOTAS: Criação do método.
+  ------------------------------------------------------ }
 procedure TFormPadraoCadastro.ConfigVisual;
 begin
   tsConsultas.TabVisible := False;
@@ -228,6 +356,13 @@ begin
   cbxModoFiltro.ItemIndex := 0;
 end;
 
+{ ------------------------------------------------------
+  METODO: ControlaLabelStatusFrom
+  AUTOR: Djonatan Willenz
+  OBJETIVO:
+  DATA: 13/04/2020
+  NOTAS: Criação do método.
+  ------------------------------------------------------ }
 procedure TFormPadraoCadastro.ControlaLabelStatusFrom;
 begin
   case SqlCadastro.State of
@@ -242,11 +377,25 @@ begin
     lblStatus.Caption := 'Consultado Registro  ';
 end;
 
+{ ------------------------------------------------------
+  METODO: edtConsultasChange
+  AUTOR: Djonatan Willenz
+  OBJETIVO:
+  DATA: 13/04/2020
+  NOTAS: Criação do método.
+  ------------------------------------------------------ }
 procedure TFormPadraoCadastro.edtConsultasChange(Sender: TObject);
 begin
   btnFiltrar.Enabled := edtConsultas.Text <> '';
 end;
 
+{ ------------------------------------------------------
+  METODO: FiltrarSQL
+  AUTOR: Djonatan Willenz
+  OBJETIVO:
+  DATA: 13/04/2020
+  NOTAS: Criação do método.
+  ------------------------------------------------------ }
 procedure TFormPadraoCadastro.FiltrarSQL(ATextoFiltro, ANomeTabela: string);
 begin
   with SQLConsultas do
@@ -276,12 +425,37 @@ begin
   end;
 end;
 
+{ ------------------------------------------------------
+  METODO: FormShow
+  AUTOR: Djonatan Willenz
+  OBJETIVO:
+  DATA: 13/04/2020
+  NOTAS: Criação do método.
+  ------------------------------------------------------ }
 procedure TFormPadraoCadastro.FormShow(Sender: TObject);
 begin
   SetConfigInicial;
   ConfigVisual;
 end;
 
+{ ------------------------------------------------------
+  METODO: InserirValoresFields
+  AUTOR: Djonatan Willenz
+  OBJETIVO:
+  DATA: 13/04/2020
+  NOTAS: Criação do método.
+  ------------------------------------------------------ }
+procedure TFormPadraoCadastro.InserirValoresFields;
+begin
+end;
+
+{ ------------------------------------------------------
+  METODO: SetConfigInicial
+  AUTOR: Djonatan Willenz
+  OBJETIVO:
+  DATA: 13/04/2020
+  NOTAS: Criação do método.
+  ------------------------------------------------------ }
 procedure TFormPadraoCadastro.SetConfigInicial;
 begin
   btnNovo.Enabled := not(SqlCadastro.State in [dsInsert, dsEdit]);
@@ -297,6 +471,13 @@ begin
   ControlaLabelStatusFrom;
 end;
 
+{ ------------------------------------------------------
+  METODO: ValidarCamposTexto
+  AUTOR: Djonatan Willenz
+  OBJETIVO:
+  DATA: 13/04/2020
+  NOTAS: Criação do método.
+  ------------------------------------------------------ }
 procedure TFormPadraoCadastro.ValidarCamposTexto(Sender: TObject;
   dbeEdit: TEdit; ANomeCampo, ATexto: string);
 begin
@@ -304,6 +485,13 @@ begin
     ShowMessage('Campo [' + ANomeCampo + '] é de preemchimento obrigatório');
 end;
 
+{ ------------------------------------------------------
+  METODO: ValidarEmail
+  AUTOR: Djonatan Willenz
+  OBJETIVO:
+  DATA: 13/04/2020
+  NOTAS: Criação do método.
+  ------------------------------------------------------ }
 procedure TFormPadraoCadastro.ValidarEmail(Sender: TObject; dbeEdit: TEdit;
   ANomeCampo, ATextoEmail: string);
 var
@@ -331,3 +519,4 @@ finalization
 UnRegisterClass(TFormPadraoCadastro);
 
 end.
+

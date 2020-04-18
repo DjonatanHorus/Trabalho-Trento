@@ -1,9 +1,9 @@
-object Form3: TForm3
+object FormOrcamentos: TFormOrcamentos
   Left = 0
   Top = 0
-  Caption = 'Form3'
-  ClientHeight = 537
-  ClientWidth = 558
+  Caption = 'FormOrcamentos'
+  ClientHeight = 381
+  ClientWidth = 657
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
