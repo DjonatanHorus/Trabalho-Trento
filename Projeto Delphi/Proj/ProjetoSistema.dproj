@@ -148,7 +148,7 @@
             <FormType>dfm</FormType>
         </DCCReference>
         <DCCReference Include="..\Src\Units Types Geral\UnFDQueryCon.pas"/>
-        <DCCReference Include="UnFormCaixaVendas.pas">
+        <DCCReference Include="..\Src\Tela de Caixa vendas\UnFormCaixaVendas.pas">
             <Form>FormCaixaVenda</Form>
             <FormType>dfm</FormType>
         </DCCReference>
@@ -158,6 +158,18 @@
         </DCCReference>
         <DCCReference Include="..\Src\Cadastro de Receitas\UnFormCadastroReceitas.pas">
             <Form>FormCadastroReceitas</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="..\Src\Orçamentos\UnFormOrcamentosPedidos.pas">
+            <Form>Form3</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="..\Src\Calcular Margem de Lucro\UnFormCalcularMagemLucro.pas">
+            <Form>Form4</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="..\Src\Configurações\UnFormConfiguracoes.pas">
+            <Form>Form2</Form>
             <FormType>dfm</FormType>
         </DCCReference>
         <BuildConfiguration Include="Release">

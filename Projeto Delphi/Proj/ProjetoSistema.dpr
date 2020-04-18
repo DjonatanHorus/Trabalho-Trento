@@ -21,9 +21,12 @@ uses
   UnFormCadastroUsuario in '..\Src\Cadastro Usuario\UnFormCadastroUsuario.pas' {FormCadastroUsuario},
   UnFormPadraoCadastro in '..\Src\Formularios Padrão Framework\UnFormPadraoCadastro.pas' {FormPadraoCadastro},
   UnFDQueryCon in '..\Src\Units Types Geral\UnFDQueryCon.pas',
-  UnFormCaixaVendas in 'UnFormCaixaVendas.pas' {FormCaixaVenda},
+  UnFormCaixaVendas in '..\Src\Tela de Caixa vendas\UnFormCaixaVendas.pas' {FormCaixaVenda},
   UnFormCadastroMateriaPrima in '..\Src\Cadastro de Materia Prima\UnFormCadastroMateriaPrima.pas' {FormCadastroMateriaPrima},
-  UnFormCadastroReceitas in '..\Src\Cadastro de Receitas\UnFormCadastroReceitas.pas' {FormCadastroReceitas};
+  UnFormCadastroReceitas in '..\Src\Cadastro de Receitas\UnFormCadastroReceitas.pas' {FormCadastroReceitas},
+  UnFormOrcamentosPedidos in '..\Src\Orçamentos\UnFormOrcamentosPedidos.pas' {Form3},
+  UnFormCalcularMagemLucro in '..\Src\Calcular Margem de Lucro\UnFormCalcularMagemLucro.pas' {Form4},
+  UnFormConfiguracoes in '..\Src\Configurações\UnFormConfiguracoes.pas' {Form2};
 
 {$R *.res}
 
@@ -33,5 +36,9 @@ begin
   Application.CreateForm(TDmConexao, DmConexao);
   Application.CreateForm(TDmMenuPrincipal, DmMenuPrincipal);
   Application.CreateForm(TFormMenuPrincipal, FormMenuPrincipal);
+  Application.CreateForm(TForm2, Form2);
+  Application.CreateForm(TForm3, Form3);
+  Application.CreateForm(TForm4, Form4);
+  Application.CreateForm(TForm2, Form2);
   Application.Run;
 end.
