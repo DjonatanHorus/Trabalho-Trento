@@ -1,10 +1,10 @@
 object DmConsultas: TDmConsultas
   OldCreateOrder = False
-  Height = 292
-  Width = 554
+  Height = 159
+  Width = 238
   object FdSqlCon: TFDQuery
     Connection = DmConexao.FDCon
-    Left = 80
-    Top = 48
+    Left = 72
+    Top = 40
   end
 end

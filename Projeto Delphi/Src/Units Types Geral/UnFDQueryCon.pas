@@ -10,7 +10,7 @@ unit UnFDQueryCon;
 interface
 
 uses
-  UnDmTypes;
+  UnDmTypes, System.SysUtils;
 
 type
   TConsultas = class
@@ -30,9 +30,10 @@ class function TConsultas.BuscarProximoID(ANomeTabela,
   ANomeCampoID: string): integer;
 begin
   DmConsultas.FdsqlCon.Close;
-  DmConsultas.FdsqlCon.SQL.Clear;
-  DmConsultas.FdsqlCon.SQL.Add('SELECT MAX(%0:S)');
-  DmConsultas.FdsqlCon.SQL.Add('  FROM %0:S');
+  DmConsultas.FdsqlCon.SQL.Text :=
+    Format('SELECT MAX(%0:S)AS %0:S FROM  %1:S', [
+    { 0 } ANomeCampoID,
+    { 1 } ANomeTabela]);
   DmConsultas.FdsqlCon.Open();
 
   Try

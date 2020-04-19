@@ -40,7 +40,10 @@ type
     Label1: TLabel;
     dtpDataNasc: TDateTimePicker;
     lblAtualizacoes: TLabel;
+    edtTelefone: TMaskEdit;
+    lblTelefone: TLabel;
     procedure actSalvarExecute(Sender: TObject);
+    procedure FormShow(Sender: TObject);
   protected
     procedure ValidarCampos; override;
     procedure SetarConfig;
@@ -53,6 +56,8 @@ var
 
 implementation
 
+uses
+  UnTypesGeral, UnFDQueryCon;
 {$R *.dfm}
 
 { ------------------------------------------------------
@@ -76,8 +81,25 @@ end;
   DATA: 13/04/2020
   NOTAS: Criação do método.
   ------------------------------------------------------ }
+procedure TFormCadastroCliente.FormShow(Sender: TObject);
+begin
+  SetarConfig;
+  inherited;
+end;
+
 procedure TFormCadastroCliente.InserirValoresFields;
 begin
+  SqlCadastro.FieldByName('IDCLIENTE').AsInteger :=
+    TConsultas.BuscarProximoID('CLIENTE', 'IDCLIENTE');
+  SqlCadastro.FieldByName('NOME').AsString := edtNome.Text;
+  SqlCadastro.FieldByName('DATA').AsDateTime := dtpDataNasc.Date;
+  SqlCadastro.FieldByName('CPF').AsString := edtCPF.Text;
+  SqlCadastro.FieldByName('ENDERECO').AsString := edtEndereco.Text;
+  SqlCadastro.FieldByName('UF').AsString := edtEstado.Text;
+  SqlCadastro.FieldByName('CEP').AsString := edtCep.Text;
+  SqlCadastro.FieldByName('CODIGO').AsString := edtCodigo.Text;
+  SqlCadastro.FieldByName('TELEFONE').AsString := edtTelefone.Text;
+  SqlCadastro.FieldByName('BAIRRO').AsString := edtBairro.Text;
   inherited;
 end;
 

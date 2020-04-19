@@ -2,11 +2,6 @@
 
 
 
-
-
-
-
-
   UNIT: UnFormPadraoCadastro
   AUTOR: Djonatan Willenz
   OBJETIVO:
@@ -132,7 +127,6 @@ var
     ------------------------------------------------------ }
 procedure TFormPadraoCadastro.ValidarCampos;
 begin
-
 end;
 
 { ------------------------------------------------------
@@ -271,12 +265,9 @@ begin
   if dsCadastro.State in [dsInsert, dsEdit] then
   begin
     SqlCadastro.Post;
-    SQLConsultas.Active := False;
-    SQLConsultas.Active := True;
-    // SqlCadastro.ApplyUpdates(-1);
+    SqlCadastro.ApplyUpdates(0);
     SetConfigInicial;
     tsConsultas.Show;
-    // TGTypeGeral.SetFocusCampo(Sender, edtConsultas);
   end;
 end;
 

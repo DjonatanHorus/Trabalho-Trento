@@ -7,6 +7,7 @@ inherited FormPadraoCadastro: TFormPadraoCadastro
   Constraints.MinHeight = 450
   Constraints.MinWidth = 500
   OnShow = FormShow
+  ExplicitTop = -23
   ExplicitWidth = 500
   ExplicitHeight = 450
   PixelsPerInch = 96
@@ -16,14 +17,13 @@ inherited FormPadraoCadastro: TFormPadraoCadastro
     Left = 430
     Top = 0
     Width = 64
-    Height = 400
+    Height = 398
     Margins.Left = 0
     Margins.Top = 0
     Margins.Right = 0
     Align = alRight
     TabOrder = 0
-    ExplicitLeft = 630
-    ExplicitHeight = 520
+    ExplicitHeight = 400
     object btnNovo: TSpeedButton
       AlignWithMargins = True
       Left = 4
@@ -410,7 +410,7 @@ inherited FormPadraoCadastro: TFormPadraoCadastro
     object btnSair: TSpeedButton
       AlignWithMargins = True
       Left = 4
-      Top = 342
+      Top = 340
       Width = 56
       Height = 47
       Margins.Bottom = 10
@@ -565,16 +565,14 @@ inherited FormPadraoCadastro: TFormPadraoCadastro
     Left = 0
     Top = 0
     Width = 430
-    Height = 403
+    Height = 401
     ActivePage = tsCadastro
     Align = alClient
     TabOrder = 1
-    ExplicitWidth = 630
-    ExplicitHeight = 523
+    ExplicitHeight = 403
     object tsConsultas: TTabSheet
       Caption = 'Consultas'
-      ExplicitWidth = 622
-      ExplicitHeight = 495
+      ExplicitHeight = 375
       object pnlConsultas: TPanel
         Left = 0
         Top = 0
@@ -711,7 +709,7 @@ inherited FormPadraoCadastro: TFormPadraoCadastro
         Left = 0
         Top = 77
         Width = 422
-        Height = 298
+        Height = 296
         Align = alClient
         DataSource = dsConsultas
         FixedColor = clHotLight
@@ -735,21 +733,18 @@ inherited FormPadraoCadastro: TFormPadraoCadastro
     object tsCadastro: TTabSheet
       Caption = 'Cadastro'
       ImageIndex = 1
-      ExplicitWidth = 622
-      ExplicitHeight = 495
+      ExplicitHeight = 375
       object pgcCadastro: TPageControl
         Left = 0
         Top = 43
         Width = 422
-        Height = 332
+        Height = 330
         ActivePage = tsCadastroPrincipal
         Align = alClient
         TabOrder = 0
-        ExplicitWidth = 622
-        ExplicitHeight = 452
+        ExplicitHeight = 332
         object tsCadastroPrincipal: TTabSheet
-          ExplicitWidth = 614
-          ExplicitHeight = 424
+          ExplicitHeight = 304
         end
       end
       object pnlCadastro: TPanel
@@ -759,7 +754,6 @@ inherited FormPadraoCadastro: TFormPadraoCadastro
         Height = 43
         Align = alTop
         TabOrder = 1
-        ExplicitWidth = 622
         object btnPrimeiro: TSpeedButton
           Left = 11
           Top = 0
@@ -1023,23 +1017,21 @@ inherited FormPadraoCadastro: TFormPadraoCadastro
   end
   object pnlFoter: TPanel
     Left = 0
-    Top = 403
+    Top = 401
     Width = 494
-    Height = 18
+    Height = 20
     Align = alBottom
     TabOrder = 2
-    ExplicitTop = 523
-    ExplicitWidth = 694
     object lblStatus: TLabel
       AlignWithMargins = True
-      Left = 269
+      Left = 271
       Top = 1
       Width = 105
-      Height = 15
+      Height = 18
       Margins.Left = 20
       Margins.Top = 0
       Margins.Right = 0
-      Margins.Bottom = 1
+      Margins.Bottom = 0
       Align = alLeft
       Caption = '---------------------'
       Font.Charset = DEFAULT_CHARSET
@@ -1048,19 +1040,24 @@ inherited FormPadraoCadastro: TFormPadraoCadastro
       Font.Name = 'Tahoma'
       Font.Style = [fsItalic]
       ParentFont = False
-      ExplicitHeight = 18
+      ExplicitLeft = 269
+      ExplicitTop = 0
+      ExplicitHeight = 15
     end
     object pgbAguarde: TProgressBar
-      Left = 1
-      Top = 1
+      AlignWithMargins = True
+      Left = 2
+      Top = 2
       Width = 248
       Height = 16
-      Margins.Left = 10
-      Margins.Top = 10
-      Margins.Right = 10
-      Margins.Bottom = 10
+      Margins.Left = 1
+      Margins.Top = 1
+      Margins.Right = 1
+      Margins.Bottom = 1
       Align = alLeft
       TabOrder = 0
+      ExplicitLeft = 0
+      ExplicitTop = -7
     end
   end
   object SqlCadastro: TFDQuery

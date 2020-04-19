@@ -6,27 +6,33 @@ inherited FormCadastroCliente: TFormCadastroCliente
   TextHeight = 13
   inherited pnlOpcoes: TPanel
     Left = 540
+    ExplicitLeft = 540
   end
   inherited pgcFormCadastro: TPageControl
     Width = 540
+    ExplicitWidth = 540
     inherited tsConsultas: TTabSheet
+      ExplicitWidth = 532
       inherited pnlConsultas: TPanel
         Width = 532
+        ExplicitWidth = 532
         inherited gprFiltro: TGroupBox
           Width = 141
-          ExplicitWidth = 167
+          ExplicitWidth = 141
           inherited cbxTipoFiltro: TComboBox
             Width = 124
+            ExplicitWidth = 124
           end
           inherited cbxModoFiltro: TComboBox
             Width = 124
+            ExplicitWidth = 124
           end
         end
         inherited gpbConsultar: TGroupBox
           Left = 175
           Width = 347
           ExplicitLeft = 175
-          ExplicitWidth = 373
+          ExplicitWidth = 347
           inherited btnFiltrar: TSpeedButton
             Left = 256
             Width = 85
@@ -37,7 +43,7 @@ inherited FormCadastroCliente: TFormCadastroCliente
             Left = 9
             Width = 212
             ExplicitLeft = 9
-            ExplicitWidth = 238
+            ExplicitWidth = 212
           end
         end
       end
@@ -46,13 +52,12 @@ inherited FormCadastroCliente: TFormCadastroCliente
       end
     end
     inherited tsCadastro: TTabSheet
+      ExplicitWidth = 532
       inherited pgcCadastro: TPageControl
         Width = 532
+        ExplicitWidth = 532
         inherited tsCadastroPrincipal: TTabSheet
-          ExplicitLeft = 28
-          ExplicitTop = 30
           ExplicitWidth = 524
-          ExplicitHeight = 304
           object lblCodigo: TLabel
             Left = 19
             Top = 29
@@ -123,6 +128,13 @@ inherited FormCadastroCliente: TFormCadastroCliente
             Height = 13
             Caption = 'Ultima atualiza'#231#227'o......'
           end
+          object lblTelefone: TLabel
+            Left = 302
+            Top = 122
+            Width = 46
+            Height = 13
+            Caption = 'Telefone:'
+          end
           object edtCodigo: TMaskEdit
             Left = 19
             Top = 48
@@ -190,19 +202,29 @@ inherited FormCadastroCliente: TFormCadastroCliente
             Time = 0.653743576389388200
             TabOrder = 8
           end
+          object edtTelefone: TMaskEdit
+            Left = 302
+            Top = 141
+            Width = 211
+            Height = 21
+            TabOrder = 9
+            Text = ''
+          end
         end
       end
       inherited pnlCadastro: TPanel
         Width = 532
+        ExplicitWidth = 532
       end
     end
   end
   inherited pnlFoter: TPanel
     Width = 604
+    ExplicitWidth = 604
   end
   inherited SqlCadastro: TFDQuery
     Left = 232
-    Top = 72
+    Top = 104
   end
   inherited dsCadastro: TDataSource
     Left = 200

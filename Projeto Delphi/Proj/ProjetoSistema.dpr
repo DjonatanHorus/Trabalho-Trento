@@ -36,6 +36,7 @@ begin
   Application.CreateForm(TFormOrcamentos, FormOrcamentos);
   Application.CreateForm(TForm4, Form4);
   Application.CreateForm(TFormConfiguracoes, FormConfiguracoes);
+  Application.CreateForm(TDmConsultas, DmConsultas);
   Application.Run;
 
 end.
